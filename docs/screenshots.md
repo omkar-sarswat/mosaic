@@ -28,7 +28,7 @@ Transfers can be followed through parties or accounts, with traced destinations 
 
 ## Data studio
 
-![Data studio column mapping for a synthetic source extract](product-book/shots/13-studio-columns.png)
+![Data studio column mapping for a synthetic source extract](product-book/shots/13-studio-fields.png)
 
 Incoming fields are inspected and mapped before publication. Preparation and approval remain visible steps in the workflow.
 
