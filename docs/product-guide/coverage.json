@@ -1,0 +1,618 @@
+[
+  {
+    "workflow": "Workspace overview",
+    "reference_page": 12,
+    "reference_image": "01-overview.png",
+    "guide_page": 7,
+    "guide_section": "Workspace, search and daily work"
+  },
+  {
+    "workflow": "Global record search",
+    "reference_page": 13,
+    "reference_image": "01-search.png",
+    "guide_page": 7,
+    "guide_section": "Workspace, search and daily work"
+  },
+  {
+    "workflow": "Search across scripts and spellings",
+    "reference_page": 14,
+    "reference_image": "01-search-script.png",
+    "guide_page": 7,
+    "guide_section": "Workspace, search and daily work"
+  },
+  {
+    "workflow": "Case creation",
+    "reference_page": 15,
+    "reference_image": "01-open-case.png",
+    "guide_page": 7,
+    "guide_section": "Workspace, search and daily work"
+  },
+  {
+    "workflow": "Investigating officer’s work queue",
+    "reference_page": 16,
+    "reference_image": "02-overview-crime.png",
+    "guide_page": 7,
+    "guide_section": "Workspace, search and daily work"
+  },
+  {
+    "workflow": "Supervisory decisions",
+    "reference_page": 17,
+    "reference_image": "02-overview-supervisor.png",
+    "guide_page": 7,
+    "guide_section": "Workspace, search and daily work"
+  },
+  {
+    "workflow": "Workspace appearance",
+    "reference_page": 18,
+    "reference_image": "01-light-theme.png",
+    "guide_page": 7,
+    "guide_section": "Workspace, search and daily work"
+  },
+  {
+    "workflow": "Identity and session controls",
+    "reference_page": 19,
+    "reference_image": "01-account-menu.png",
+    "guide_page": 7,
+    "guide_section": "Workspace, search and daily work"
+  },
+  {
+    "workflow": "Role-based access refusal",
+    "reference_page": 20,
+    "reference_image": "01-role-refused.png",
+    "guide_page": 7,
+    "guide_section": "Workspace, search and daily work"
+  },
+  {
+    "workflow": "Case board",
+    "reference_page": 22,
+    "reference_image": "03-case-board.png",
+    "guide_page": 8,
+    "guide_section": "Case management and coordination"
+  },
+  {
+    "workflow": "Case-priority explanation",
+    "reference_page": 23,
+    "reference_image": "03-case-suspect-open.png",
+    "guide_page": 8,
+    "guide_section": "Case management and coordination"
+  },
+  {
+    "workflow": "Case lead progression",
+    "reference_page": 24,
+    "reference_image": "03-case-leads-board.png",
+    "guide_page": 8,
+    "guide_section": "Case management and coordination"
+  },
+  {
+    "workflow": "Case alerts and chronology",
+    "reference_page": 25,
+    "reference_image": "03-case-board-5.png",
+    "guide_page": 8,
+    "guide_section": "Case management and coordination"
+  },
+  {
+    "workflow": "Case closure and legal holds",
+    "reference_page": 26,
+    "reference_image": "03-case-close.png",
+    "guide_page": 8,
+    "guide_section": "Case management and coordination"
+  },
+  {
+    "workflow": "Case network",
+    "reference_page": 27,
+    "reference_image": "03-case-network.png",
+    "guide_page": 8,
+    "guide_section": "Case management and coordination"
+  },
+  {
+    "workflow": "Exhibit registration",
+    "reference_page": 28,
+    "reference_image": "03-case-evidence-form.png",
+    "guide_page": 9,
+    "guide_section": "Evidence registration and custody"
+  },
+  {
+    "workflow": "Evidence locker and custody",
+    "reference_page": 29,
+    "reference_image": "03-case-evidence.png",
+    "guide_page": 9,
+    "guide_section": "Evidence registration and custody"
+  },
+  {
+    "workflow": "Evidence release and export",
+    "reference_page": 30,
+    "reference_image": "03-case-evidence-exports.png",
+    "guide_page": 9,
+    "guide_section": "Evidence registration and custody"
+  },
+  {
+    "workflow": "Report templates",
+    "reference_page": 31,
+    "reference_image": "03-case-reports-list.png",
+    "guide_page": 10,
+    "guide_section": "Reports and controlled release"
+  },
+  {
+    "workflow": "Structured report composition",
+    "reference_page": 32,
+    "reference_image": "03-report-editor.png",
+    "guide_page": 10,
+    "guide_section": "Reports and controlled release"
+  },
+  {
+    "workflow": "Report content selection",
+    "reference_page": 33,
+    "reference_image": "03-report-editor-2.png",
+    "guide_page": 10,
+    "guide_section": "Reports and controlled release"
+  },
+  {
+    "workflow": "Draft management",
+    "reference_page": 34,
+    "reference_image": "03-report-editor-3.png",
+    "guide_page": 10,
+    "guide_section": "Reports and controlled release"
+  },
+  {
+    "workflow": "Recipient-specific report release",
+    "reference_page": 35,
+    "reference_image": "03-report-export.png",
+    "guide_page": 10,
+    "guide_section": "Reports and controlled release"
+  },
+  {
+    "workflow": "Exported case report",
+    "reference_page": 36,
+    "reference_image": "19-report-page-1.png",
+    "guide_page": 10,
+    "guide_section": "Reports and controlled release"
+  },
+  {
+    "workflow": "Draft evidence certificate",
+    "reference_page": 37,
+    "reference_image": "19-certificate-page-1.png",
+    "guide_page": 9,
+    "guide_section": "Evidence registration and custody"
+  },
+  {
+    "workflow": "Detector finding and evidence",
+    "reference_page": 39,
+    "reference_image": "04-leads-ncb.png",
+    "guide_page": 11,
+    "guide_section": "Investigative leads"
+  },
+  {
+    "workflow": "Case request and lead disposition",
+    "reference_page": 40,
+    "reference_image": "04-leads-ncb-request.png",
+    "guide_page": 11,
+    "guide_section": "Investigative leads"
+  },
+  {
+    "workflow": "Approved lead in case context",
+    "reference_page": 41,
+    "reference_image": "04-leads-syndicate.png",
+    "guide_page": 11,
+    "guide_section": "Investigative leads"
+  },
+  {
+    "workflow": "Financial typology alerts",
+    "reference_page": 43,
+    "reference_image": "05-alerts.png",
+    "guide_page": 12,
+    "guide_section": "Financial alerts and typologies"
+  },
+  {
+    "workflow": "Transaction-path examination",
+    "reference_page": 44,
+    "reference_image": "05-alerts-filtered.png",
+    "guide_page": 12,
+    "guide_section": "Financial alerts and typologies"
+  },
+  {
+    "workflow": "Entity-watch activity",
+    "reference_page": 46,
+    "reference_image": "06-watchlist.png",
+    "guide_page": 13,
+    "guide_section": "Watches and saved searches"
+  },
+  {
+    "workflow": "Geographic watch",
+    "reference_page": 47,
+    "reference_image": "06-watchlist-area.png",
+    "guide_page": 13,
+    "guide_section": "Watches and saved searches"
+  },
+  {
+    "workflow": "Watch configuration",
+    "reference_page": 48,
+    "reference_image": "06-watch-dialog.png",
+    "guide_page": 13,
+    "guide_section": "Watches and saved searches"
+  },
+  {
+    "workflow": "Saved-search review",
+    "reference_page": 49,
+    "reference_image": "06-watchlist-search.png",
+    "guide_page": 13,
+    "guide_section": "Watches and saved searches"
+  },
+  {
+    "workflow": "Network workspace",
+    "reference_page": 51,
+    "reference_image": "07-network.png",
+    "guide_page": 14,
+    "guide_section": "Exploring records as a network"
+  },
+  {
+    "workflow": "Network record list",
+    "reference_page": 52,
+    "reference_image": "07-network-list.png",
+    "guide_page": 14,
+    "guide_section": "Exploring records as a network"
+  },
+  {
+    "workflow": "Layouts and relationship filters",
+    "reference_page": 53,
+    "reference_image": "07-network-types.png",
+    "guide_page": 14,
+    "guide_section": "Exploring records as a network"
+  },
+  {
+    "workflow": "Structural analysis",
+    "reference_page": 54,
+    "reference_image": "07-network-analysis.png",
+    "guide_page": 15,
+    "guide_section": "Structural analysis and paths"
+  },
+  {
+    "workflow": "Communities and connectivity",
+    "reference_page": 55,
+    "reference_image": "07-network-community.png",
+    "guide_page": 15,
+    "guide_section": "Structural analysis and paths"
+  },
+  {
+    "workflow": "Financial-flow layout",
+    "reference_page": 56,
+    "reference_image": "07-network-money.png",
+    "guide_page": 15,
+    "guide_section": "Structural analysis and paths"
+  },
+  {
+    "workflow": "Record inspection and path analysis",
+    "reference_page": 57,
+    "reference_image": "07-network-inspector.png",
+    "guide_page": 14,
+    "guide_section": "Exploring records as a network"
+  },
+  {
+    "workflow": "Dossier overview",
+    "reference_page": 59,
+    "reference_image": "08-dossier-overview.png",
+    "guide_page": 16,
+    "guide_section": "Entity dossiers and provenance"
+  },
+  {
+    "workflow": "Case assessment and actions",
+    "reference_page": 60,
+    "reference_image": "08-dossier-overview-2.png",
+    "guide_page": 16,
+    "guide_section": "Entity dossiers and provenance"
+  },
+  {
+    "workflow": "Protected-field access",
+    "reference_page": 61,
+    "reference_image": "08-dossier-unmask.png",
+    "guide_page": 16,
+    "guide_section": "Entity dossiers and provenance"
+  },
+  {
+    "workflow": "Case history and pattern findings",
+    "reference_page": 62,
+    "reference_image": "08-dossier-record.png",
+    "guide_page": 16,
+    "guide_section": "Entity dossiers and provenance"
+  },
+  {
+    "workflow": "Accounts and transaction history",
+    "reference_page": 63,
+    "reference_image": "08-dossier-financials.png",
+    "guide_page": 17,
+    "guide_section": "Activity, communications and time"
+  },
+  {
+    "workflow": "Entity relationship network",
+    "reference_page": 64,
+    "reference_image": "08-dossier-network.png",
+    "guide_page": 16,
+    "guide_section": "Entity dossiers and provenance"
+  },
+  {
+    "workflow": "Communication-record analysis",
+    "reference_page": 65,
+    "reference_image": "08-dossier-comms.png",
+    "guide_page": 17,
+    "guide_section": "Activity, communications and time"
+  },
+  {
+    "workflow": "Travel and asset records",
+    "reference_page": 66,
+    "reference_image": "08-dossier-assets.png",
+    "guide_page": 17,
+    "guide_section": "Activity, communications and time"
+  },
+  {
+    "workflow": "Chronological record view",
+    "reference_page": 67,
+    "reference_image": "08-dossier-timeline.png",
+    "guide_page": 17,
+    "guide_section": "Activity, communications and time"
+  },
+  {
+    "workflow": "Source provenance",
+    "reference_page": 68,
+    "reference_image": "08-dossier-sources.png",
+    "guide_page": 16,
+    "guide_section": "Entity dossiers and provenance"
+  },
+  {
+    "workflow": "Outward financial trace",
+    "reference_page": 70,
+    "reference_image": "09-money.png",
+    "guide_page": 18,
+    "guide_section": "Following the money trail"
+  },
+  {
+    "workflow": "Inward financial trace",
+    "reference_page": 71,
+    "reference_image": "09-money-in.png",
+    "guide_page": 18,
+    "guide_section": "Following the money trail"
+  },
+  {
+    "workflow": "Account-level financial trace",
+    "reference_page": 72,
+    "reference_image": "09-money-accounts.png",
+    "guide_page": 18,
+    "guide_section": "Following the money trail"
+  },
+  {
+    "workflow": "Relationship-enquiry setup",
+    "reference_page": 74,
+    "reference_image": "10-connect-start.png",
+    "guide_page": 19,
+    "guide_section": "Examining a specific connection"
+  },
+  {
+    "workflow": "Connections between records",
+    "reference_page": 75,
+    "reference_image": "10-connect.png",
+    "guide_page": 19,
+    "guide_section": "Examining a specific connection"
+  },
+  {
+    "workflow": "Geographic overview",
+    "reference_page": 77,
+    "reference_image": "11-globe.png",
+    "guide_page": 20,
+    "guide_section": "Geographic and area investigation"
+  },
+  {
+    "workflow": "Local geographic examination",
+    "reference_page": 78,
+    "reference_image": "11-globe-zoom.png",
+    "guide_page": 20,
+    "guide_section": "Geographic and area investigation"
+  },
+  {
+    "workflow": "Area-search parameters",
+    "reference_page": 79,
+    "reference_image": "11-area-panel.png",
+    "guide_page": 20,
+    "guide_section": "Geographic and area investigation"
+  },
+  {
+    "workflow": "Area observations",
+    "reference_page": 80,
+    "reference_image": "11-area-results.png",
+    "guide_page": 20,
+    "guide_section": "Geographic and area investigation"
+  },
+  {
+    "workflow": "Observation details and coverage",
+    "reference_page": 81,
+    "reference_image": "11-area-results-2.png",
+    "guide_page": 20,
+    "guide_section": "Geographic and area investigation"
+  },
+  {
+    "workflow": "Incident overview and record access",
+    "reference_page": 83,
+    "reference_image": "12-explore.png",
+    "guide_page": 21,
+    "guide_section": "Exploring the record collection"
+  },
+  {
+    "workflow": "Filtered record exploration",
+    "reference_page": 84,
+    "reference_image": "12-explore-results.png",
+    "guide_page": 21,
+    "guide_section": "Exploring the record collection"
+  },
+  {
+    "workflow": "Extract profiling",
+    "reference_page": 86,
+    "reference_image": "13-studio-columns.png",
+    "guide_page": 22,
+    "guide_section": "Preparing incoming information"
+  },
+  {
+    "workflow": "Cleaning and quarantine",
+    "reference_page": 87,
+    "reference_image": "13-studio-cleanup.png",
+    "guide_page": 22,
+    "guide_section": "Preparing incoming information"
+  },
+  {
+    "workflow": "Field and relationship mapping",
+    "reference_page": 88,
+    "reference_image": "13-studio-fields.png",
+    "guide_page": 22,
+    "guide_section": "Preparing incoming information"
+  },
+  {
+    "workflow": "Incoming-record matching",
+    "reference_page": 89,
+    "reference_image": "13-studio-matching.png",
+    "guide_page": 22,
+    "guide_section": "Preparing incoming information"
+  },
+  {
+    "workflow": "Pre-publication checks",
+    "reference_page": 90,
+    "reference_image": "13-studio-checks.png",
+    "guide_page": 23,
+    "guide_section": "Reviewing and publishing changes"
+  },
+  {
+    "workflow": "Proposed record changes",
+    "reference_page": 91,
+    "reference_image": "13-studio-changes.png",
+    "guide_page": 23,
+    "guide_section": "Reviewing and publishing changes"
+  },
+  {
+    "workflow": "Narrative tagging",
+    "reference_page": 92,
+    "reference_image": "13-studio-tagging.png",
+    "guide_page": 22,
+    "guide_section": "Preparing incoming information"
+  },
+  {
+    "workflow": "Document-reference inspection",
+    "reference_page": 93,
+    "reference_image": "13-studio-diary.png",
+    "guide_page": 22,
+    "guide_section": "Preparing incoming information"
+  },
+  {
+    "workflow": "Submission for review",
+    "reference_page": 94,
+    "reference_image": "13-studio-proposed.png",
+    "guide_page": 23,
+    "guide_section": "Reviewing and publishing changes"
+  },
+  {
+    "workflow": "Publication decision",
+    "reference_page": 95,
+    "reference_image": "13-studio-review.png",
+    "guide_page": 23,
+    "guide_section": "Reviewing and publishing changes"
+  },
+  {
+    "workflow": "Published intake",
+    "reference_page": 96,
+    "reference_image": "13-studio-published.png",
+    "guide_page": 23,
+    "guide_section": "Reviewing and publishing changes"
+  },
+  {
+    "workflow": "Identity-review queue",
+    "reference_page": 98,
+    "reference_image": "14-review.png",
+    "guide_page": 24,
+    "guide_section": "Reviewing uncertain identities"
+  },
+  {
+    "workflow": "Record-pair comparison",
+    "reference_page": 99,
+    "reference_image": "14-review-pair.png",
+    "guide_page": 24,
+    "guide_section": "Reviewing uncertain identities"
+  },
+  {
+    "workflow": "Probe-image registration",
+    "reference_page": 101,
+    "reference_image": "15-faces-empty.png",
+    "guide_page": 25,
+    "guide_section": "Face-search and candidate review"
+  },
+  {
+    "workflow": "Face selection and search purpose",
+    "reference_page": 102,
+    "reference_image": "15-faces-found.png",
+    "guide_page": 25,
+    "guide_section": "Face-search and candidate review"
+  },
+  {
+    "workflow": "Candidate comparison",
+    "reference_page": 103,
+    "reference_image": "15-faces-candidates.png",
+    "guide_page": 25,
+    "guide_section": "Face-search and candidate review"
+  },
+  {
+    "workflow": "Independent candidate review",
+    "reference_page": 104,
+    "reference_image": "15-faces-confirm.png",
+    "guide_page": 25,
+    "guide_section": "Face-search and candidate review"
+  },
+  {
+    "workflow": "Disaster-alert overview",
+    "reference_page": 106,
+    "reference_image": "16-cop.png",
+    "guide_page": 26,
+    "guide_section": "Disaster-response operations"
+  },
+  {
+    "workflow": "Alert detail and affected area",
+    "reference_page": 107,
+    "reference_image": "16-cop-flood.png",
+    "guide_page": 26,
+    "guide_section": "Disaster-response operations"
+  },
+  {
+    "workflow": "Resource-dispatch record",
+    "reference_page": 108,
+    "reference_image": "16-cop-dispatch.png",
+    "guide_page": 26,
+    "guide_section": "Disaster-response operations"
+  },
+  {
+    "workflow": "Audit and oversight workspace",
+    "reference_page": 110,
+    "reference_image": "17-oversight.png",
+    "guide_page": 27,
+    "guide_section": "Oversight, transparency and retention"
+  },
+  {
+    "workflow": "Targeted audit examination",
+    "reference_page": 111,
+    "reference_image": "17-oversight-filtered.png",
+    "guide_page": 27,
+    "guide_section": "Oversight, transparency and retention"
+  },
+  {
+    "workflow": "Transparency and retention",
+    "reference_page": 112,
+    "reference_image": "17-transparency.png",
+    "guide_page": 27,
+    "guide_section": "Oversight, transparency and retention"
+  },
+  {
+    "workflow": "Detector documentation",
+    "reference_page": 114,
+    "reference_image": "18-admin-library.png",
+    "guide_page": 28,
+    "guide_section": "Administration and source quality"
+  },
+  {
+    "workflow": "Source-quality register",
+    "reference_page": 115,
+    "reference_image": "18-admin-quality.png",
+    "guide_page": 28,
+    "guide_section": "Administration and source quality"
+  }
+]

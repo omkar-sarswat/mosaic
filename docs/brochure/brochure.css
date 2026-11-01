@@ -1,0 +1,254 @@
+/* The file on Mosaic: the brochure as an Indian government case file.
+   Kraft jacket front and back; white bond noting sheets inside, punched and ruled; one red tape; violet stamp ink for
+   state marks; green printed margin notes; carbon-black type. English only.
+   Voices: Mukta for printed labels, headings and margin notes, Martel for body text, Courier Prime only for typed
+   form entries (file, page, enclosure and flag numbers). */
+@page{size:210mm 297mm;margin:0}
+:root{
+  --board:#a3865a; --print:#2a1e10; --print2:#3a2a16;
+  --bond:#fafaf7; --flag:#ebe1c8; --white:#fffefb;
+  --ink:#161616; --ink2:#2b2925; --muted:#625c53; --rule:#cfc7b8;
+  --tape:#b0202a; --tape-dark:#931a23; --violet:#4f3a86; --green:#1d6b4b;
+  --lift:0 .7mm 2mm rgba(52,40,20,.16),0 .1mm .3mm rgba(52,40,20,.14);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bond)}
+body{font-family:Martel,Georgia,serif;font-size:9.4pt;line-height:1.66;color:var(--ink2);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;text-rendering:optimizeLegibility;font-kerning:normal}
+::selection{background:rgba(79,58,134,.2);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p,figure,table{margin:0}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;break-after:page;background:var(--bond)}
+.page:last-child{break-after:auto}
+
+/* ---------------------------------------------------------------- printed labels and typed entries */
+.lbl{font-family:Mukta,sans-serif;font-weight:500;font-size:6.4pt;line-height:1.25;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.typed{font-family:'Courier Prime',monospace;font-size:9pt;color:var(--ink);letter-spacing:0;font-variant-numeric:tabular-nums}
+
+/* ---------------------------------------------------------------- the noting sheet */
+.holes i{position:absolute;left:5.3mm;width:5.4mm;height:5.4mm;border-radius:50%;background:#9a7d52;
+  box-shadow:inset 0 .5mm .9mm rgba(30,18,4,.55),0 .2mm .1mm rgba(255,255,255,.7)}
+.holes i:first-child{top:105.8mm}
+.holes i:last-child{top:185.8mm}
+.mrule{position:absolute;left:45.4mm;top:17.6mm;bottom:15mm;width:.25mm;background:var(--rule)}
+.fhead{position:absolute;top:10.4mm;left:16mm;right:16mm;height:7.2mm;display:flex;justify-content:space-between;
+  align-items:baseline;border-bottom:.25mm solid var(--rule)}
+.fhead>div{display:flex;align-items:baseline;gap:2.4mm}
+.ffoot{position:absolute;bottom:9mm;left:52mm;right:16mm;display:flex;justify-content:space-between;
+  font-family:Mukta,sans-serif;font-size:6.8pt;letter-spacing:.06em;color:var(--muted)}
+
+/* fore-edge flags, stepping down by section; the open section stands proud in kraft */
+.tab{position:absolute;right:0;width:6.6mm;height:30mm;padding-top:2.3mm;display:flex;flex-direction:column;
+  align-items:center;gap:1.7mm;background:var(--flag);border-radius:1.4mm 0 0 1.4mm;
+  box-shadow:-.3mm .3mm .9mm rgba(60,40,10,.16);color:var(--muted)}
+.tab b{font-family:Mukta,sans-serif;font-weight:700;font-size:8pt;line-height:1;color:var(--ink2)}
+.tab span{writing-mode:vertical-rl;font-family:Mukta,sans-serif;font-weight:500;font-size:5.7pt;line-height:1;
+  letter-spacing:.04em;white-space:nowrap}
+.tab.on{width:9.6mm;background:var(--board) url('brand/kraft-board.jpg') center/80mm;color:var(--print);
+  box-shadow:-.4mm .4mm 1.2mm rgba(60,40,10,.3)}
+.tab.on b{color:var(--print);font-size:9pt}
+
+/* ---------------------------------------------------------------- body: margin column and noting column */
+.body{position:absolute;top:27mm;left:16mm;right:16mm;bottom:20mm}
+.row{display:grid;grid-template-columns:26mm minmax(0,1fr);column-gap:10mm;align-items:start}
+.row+.row{margin-top:7.5mm}
+.row.bleed{grid-template-columns:minmax(0,1fr)}
+.row.bleed>.m{display:none}
+.noting{font-family:Mukta,sans-serif;font-weight:500;font-size:9.2pt;line-height:1.38;color:var(--green);
+  margin-top:1.2mm;padding-top:2mm;border-top:.45mm solid var(--green)}
+
+.title{font-family:Mukta,sans-serif;font-weight:700;font-size:24pt;margin:0;line-height:1.1;letter-spacing:-.012em;
+  color:var(--ink);max-width:136mm;text-wrap:balance}
+.lead{font-weight:400;font-size:11.2pt;line-height:1.6;color:var(--ink2);max-width:130mm;margin-top:3.8mm}
+/* the first sheet behind each divider opens with more air and a larger heading */
+.sheet.start .body{top:31mm}
+.sheet.start .title{font-size:30pt;line-height:1.06;letter-spacing:-.016em}
+.sheet.start .lead{font-size:11.8pt}
+h3{font-family:Mukta,sans-serif;font-weight:600;font-size:12.5pt;line-height:1.2;color:var(--ink);margin:0 0 3mm}
+.title+.paras,.lead+.paras{margin-top:6mm}
+
+/* numbered paras, as in a government note */
+.paras{display:grid;row-gap:3.4mm;max-width:120mm}
+.para{position:relative;break-inside:avoid}
+.pn{position:absolute;left:-4.9mm;top:.06em;font-family:Mukta,sans-serif;font-weight:600;font-size:9.6pt;line-height:1.62;
+  color:var(--ink);font-variant-numeric:tabular-nums}
+.para p{font-size:10pt;line-height:1.62}
+.rh{font-weight:700;line-height:1;color:var(--ink)}
+
+/* the note's sign-off, at the foot of the note sheet */
+.signoff{margin-left:auto;width:60mm;text-align:left}
+.signoff{border-top:.35mm solid var(--ink2);padding-top:2.4mm}
+.signoff .sign{font-family:Mukta,sans-serif;font-weight:700;font-size:11pt;line-height:1.2;color:var(--ink);margin:0 0 1.4mm}
+.signoff>div{padding:.8mm 0}
+.signoff .typed{font-size:9.4pt}
+
+/* authored enclosure: one name as six systems record it */
+.slips{display:grid;grid-template-columns:repeat(3,1fr);gap:4.4mm 4.6mm;padding:1mm 0 1.4mm}
+.slip{background:var(--white);border:.2mm solid #c4bcac;padding:3mm 3.6mm 3.2mm;box-shadow:var(--lift)}
+.slip-name{margin-top:2.2mm}
+.slip-name .typed{font-size:11pt;font-weight:700}
+.slip-note{font-size:8.4pt;line-height:1.4;color:var(--muted);margin-top:1mm}
+
+/* ---------------------------------------------------------------- forms */
+.form.particulars{max-width:128mm;border-top:.35mm solid var(--ink2)}
+.fr{display:grid;grid-template-columns:30mm 1fr;column-gap:6mm;align-items:baseline;padding:2.6mm 0 2.4mm;
+  border-bottom:.25mm solid var(--rule)}
+.fr p{font-size:9.8pt;line-height:1.55;color:var(--ink)}
+.form.leaders{max-width:128mm;margin-top:5.5mm;border-top:.35mm solid var(--ink2);padding-top:1mm}
+.lr{display:flex;align-items:baseline;gap:2.2mm;padding:1.2mm 0}
+.lr span{font-size:10.2pt;color:var(--ink)}
+.lr i{flex:1;border-bottom:.35mm dotted var(--muted);transform:translateY(-1mm)}
+.lr .typed{font-size:12pt;font-weight:700;min-width:7mm;text-align:right}
+
+/* the mark as a specimen, with printed annotations */
+.markspec{position:relative;height:86mm;background:var(--white);border:.2mm solid #c4bcac;box-shadow:var(--lift)}
+.markspec img{position:absolute;left:41mm;top:13mm;width:60mm;height:60mm}
+.annos{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--green);stroke-width:.45;
+  stroke-linecap:round;stroke-linejoin:round}
+.anno{position:absolute;width:33mm;font-family:Mukta,sans-serif;font-weight:500;font-size:8.8pt;line-height:1.3;color:var(--green)}
+.anno.a1{left:5mm;top:53mm}
+.anno.a2{left:106mm;top:13mm}
+
+/* ---------------------------------------------------------------- enclosures */
+.encl{position:relative}
+.encl figcaption{display:flex;align-items:baseline;gap:2.8mm;margin-bottom:1.9mm}
+.encl figcaption .typed{font-weight:700;font-size:8.4pt;white-space:nowrap}
+.ecap{font-family:Mukta,sans-serif;font-weight:600;font-size:10pt;line-height:1.3;color:var(--ink)}
+.eexp{font-size:9.6pt;line-height:1.58;color:var(--ink2);margin-top:2.8mm;max-width:138mm}
+.crop{position:relative;overflow:hidden;background:#fff;border:.2mm solid #c4bcac;box-shadow:var(--lift)}
+.crop img{display:block;width:100%;height:auto}
+/* state marks are stamped in the margin beside the enclosure they certify, never over the product */
+.m .stamp.corner{display:flex;width:26mm;margin-top:9mm;padding:1.6mm 1.4mm 1.4mm;text-align:center}
+.m .stamp.corner .st-main{font-size:8.4pt;letter-spacing:.06em}
+.m .stamp.corner .st-sub{font-size:5.4pt;letter-spacing:.1em}
+/* a capability's continuation sheet, and the court document shown as a page of its own */
+.contd{display:flex;align-items:baseline;gap:3mm;padding-bottom:2.4mm;border-bottom:.35mm solid var(--ink2);
+  font-family:Mukta,sans-serif;font-weight:600;font-size:12.5pt;color:var(--ink)}
+.encl.doc{max-width:156mm;margin:0 auto}
+
+/* ---------------------------------------------------------------- violet rubber stamps */
+.stamp,.seal{-webkit-mask-image:url('brand/ink-grain.png');mask-image:url('brand/ink-grain.png');
+  -webkit-mask-size:64mm;mask-size:64mm;mix-blend-mode:multiply}
+.stamp{display:inline-flex;flex-direction:column;align-items:center;padding:1.6mm 3.6mm 1.4mm;color:var(--violet);
+  border:.6mm solid currentColor;border-radius:.9mm;outline:.25mm solid currentColor;outline-offset:-1.3mm;
+  transform:rotate(calc(var(--rot) * .4));opacity:.9}
+.st-main{font-family:Mukta,sans-serif;font-weight:800;font-size:10pt;line-height:1.05;letter-spacing:.08em;text-transform:uppercase}
+.st-sub{font-family:Mukta,sans-serif;font-weight:600;font-size:5.8pt;line-height:1;letter-spacing:.14em;
+  text-transform:uppercase;margin-top:.9mm;padding-top:.8mm;border-top:.25mm solid currentColor}
+.stamp.big .st-main{font-size:13pt}
+
+/* ---------------------------------------------------------------- registers and indexes */
+table{border-collapse:collapse;width:100%}
+.register{font-size:9.6pt;line-height:1.5;border-bottom:.4mm solid var(--ink2)}
+.register th{text-align:left;vertical-align:bottom;padding:2.4mm 3mm 2mm;border-top:.4mm solid var(--ink2);
+  border-bottom:.3mm solid var(--ink2);font-weight:400}
+.register td{padding:4.2mm 3mm 4mm;vertical-align:top;border-bottom:.2mm solid var(--rule)}
+.register td+td,.register th+th{border-left:.2mm solid var(--rule)}
+.register th:first-child,.register td:first-child{padding-left:0}
+.register td:first-child{font-family:Mukta,sans-serif;font-weight:600;font-size:10pt;line-height:1.4;color:var(--ink);width:32mm}
+.register td:last-child{color:var(--ink)}
+.register.agencies td:first-child{width:56mm}
+/* before and after, drawn like the Mosaic box of the architecture diagram: the old way is a plain ruled list in grey
+   serif; the Mosaic column is a white panel framed in ink, headed in spaced capitals, its entries in the box's sans */
+.register.compare td:nth-child(2){color:var(--muted)}
+.register.compare th:nth-child(3),.register.compare td:nth-child(3){background:var(--white);padding-left:4.6mm;padding-right:4.6mm;
+  border-left:.4mm solid var(--ink2);border-right:.4mm solid var(--ink2)}
+.register.compare th:nth-child(3){border-top:.4mm solid var(--ink2);border-bottom:.35mm solid var(--ink2);padding-top:3.4mm}
+.register.compare th:nth-child(3) .lbl{font-weight:700;font-size:7.6pt;letter-spacing:.16em;color:var(--ink)}
+.register.compare td:nth-child(3){font-family:Mukta,sans-serif;font-weight:500;font-size:10pt;line-height:1.4;color:var(--ink)}
+.register.compare tbody tr:last-child td:nth-child(3){border-bottom:.4mm solid var(--ink2)}
+.register.agencies td:last-child{color:var(--ink2)}
+
+.index{max-width:128mm;border-top:.35mm solid var(--ink2)}
+.index td{padding:2.3mm 0 2mm;border-bottom:.2mm solid var(--rule);vertical-align:baseline}
+.index td:first-child{width:24mm}
+.index td:nth-child(2){font-family:Mukta,sans-serif;font-weight:500;font-size:10.4pt;color:var(--ink)}
+.index td:last-child{width:14mm;text-align:right}
+.index.contents{max-width:none;margin-top:5mm}
+.index.contents td{padding:2.5mm 0 2.2mm}
+.index.contents td:nth-child(2){font-size:10.6pt}
+.index.contents.two td:first-child{width:auto;font-family:Mukta,sans-serif;font-weight:500;font-size:10.6pt;color:var(--ink)}
+
+/* ---------------------------------------------------------------- safeguards and architecture */
+.redlines{display:grid;grid-template-columns:auto 1fr;column-gap:7mm;align-items:center;padding:5mm 6mm;
+  border:.3mm solid var(--ink2)}
+.redlines p{font-size:10pt;line-height:1.6;color:var(--ink)}
+
+.arch{display:grid;grid-template-columns:1fr 8mm 1.3fr 8mm 1fr;align-items:center;margin:1mm 0}
+.a-h{font-family:Mukta,sans-serif;font-weight:600;font-size:7pt;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);padding-bottom:1.6mm;border-bottom:.3mm solid var(--ink2)}
+.a-i{font-size:9pt;line-height:1.4;padding:2.6mm 0;border-bottom:.2mm solid var(--rule);color:var(--ink)}
+.a-arrow{color:var(--muted);padding:0 1mm}
+.a-arrow svg{display:block;width:100%}
+.a-core{background:var(--white);border:.35mm solid var(--ink2);padding:3.4mm 3.6mm 3.8mm;box-shadow:var(--lift)}
+.a-core .a-h{color:var(--ink);font-size:9pt;font-weight:700;letter-spacing:.14em}
+.a-blk{font-family:Mukta,sans-serif;font-weight:500;font-size:9.4pt;line-height:1.3;color:var(--ink);padding:3mm 2.8mm;
+  margin-top:1.8mm;background:var(--bond);border:.2mm solid var(--rule)}
+.a-guard{margin-top:2.6mm;padding:2mm 2.6mm;border:.3mm dashed var(--ink2);font-size:7.8pt;line-height:1.4;color:var(--ink2)}
+
+/* ---------------------------------------------------------------- the kraft jacket */
+.jacket{background:var(--board);color:var(--print)}
+.jacket>*{position:absolute;z-index:1}
+.jacket .board{inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.jacket .lbl{color:var(--print2)}
+.jk-top{top:15mm;left:16mm;right:16mm;display:flex;justify-content:space-between;align-items:center}
+.jk-org{display:flex;align-items:center;gap:3.2mm}
+.jk-org img{width:13mm;height:13mm}
+.jk-org span{font-family:Mukta,sans-serif;font-weight:700;font-size:10.5pt;letter-spacing:.32em;color:var(--print)}
+.jk-fileno{display:flex;align-items:baseline;gap:3mm;min-width:66mm;padding:0 1mm 1.4mm;border-bottom:.3mm solid var(--print)}
+.jk-fileno .typed{font-size:11pt}
+
+.jk-subject{top:56mm;left:16mm;right:16mm;display:grid;grid-template-columns:30mm 1fr;
+  border:.45mm solid var(--print);outline:.2mm solid var(--print);outline-offset:1.1mm}
+.jk-sublbl{padding:5.4mm 4mm;border-right:.3mm solid var(--print)}
+.jk-subval{padding:9mm 9mm 8mm}
+.jk-title{font-family:Mukta,sans-serif;font-weight:800;font-size:94pt;line-height:.9;letter-spacing:.005em;
+  text-transform:uppercase;color:var(--ink);margin-left:-1.2mm;margin-bottom:10mm}
+.jk-typed{font-family:'Courier Prime',monospace;font-size:11.5pt;line-height:8mm;color:var(--ink);
+  background:repeating-linear-gradient(to bottom,transparent 0 7.7mm,rgba(42,30,16,.6) 7.7mm 8mm)}
+
+/* lal fita: one woven red tape across the board */
+.tape{left:-6mm;right:-6mm;top:199mm;height:10.5mm;
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 .3mm,transparent .3mm 1mm),
+    repeating-linear-gradient(0deg,rgba(0,0,0,.1) 0 .3mm,transparent .3mm .9mm),
+    linear-gradient(var(--tape),var(--tape-dark));
+  box-shadow:0 .8mm 1.6mm rgba(40,20,5,.38),0 .2mm .3mm rgba(40,20,5,.3)}
+.tape.back{top:66mm}
+
+.jk-rows{top:152mm;left:16mm;width:112mm}
+.jk-rows>div{display:grid;grid-template-columns:34mm 1fr;align-items:baseline;padding:2.4mm 0 1.6mm;
+  border-bottom:.3mm solid var(--print)}
+.jk-rows .typed{font-size:11.5pt}
+
+.seal{top:221mm;right:20mm;width:44mm;height:44mm;color:var(--violet);transform:rotate(-14deg);opacity:.86}
+.seal .ring{font-family:Mukta,sans-serif;font-weight:700;font-size:7.4px;letter-spacing:.22em;fill:currentColor}
+.seal .core{font-family:Mukta,sans-serif;font-weight:800;font-size:12.5px;letter-spacing:.06em;fill:currentColor}
+
+/* back cover: a requisition slip pasted on the board */
+.request{top:94mm;left:26mm;right:26mm;padding:12mm 13mm 13mm;background:var(--bond);color:var(--ink);
+  box-shadow:0 1.2mm 3.2mm rgba(40,24,6,.32),0 .2mm .4mm rgba(40,24,6,.25)}
+.request h2{font-family:Mukta,sans-serif;font-size:22pt;font-weight:700;line-height:1.15;color:var(--ink);margin:0 0 3.4mm}
+.req-lead{font-size:10.6pt;line-height:1.6;max-width:118mm}
+.req-form{margin-top:8mm}
+.rf{display:grid;grid-template-columns:40mm 1fr;align-items:end;min-height:12mm}
+.rf .typed{font-size:10.4pt;color:var(--muted);padding:0 0 1.2mm 1mm;border-bottom:.3mm solid var(--ink2)}
+.request .lbl{color:var(--muted)}
+.about{left:16mm;bottom:30mm;width:104mm;font-size:9.2pt;line-height:1.6;color:var(--print)}
+.about p+p{margin-top:2.2mm}
+.about b{font-family:Mukta,sans-serif;font-weight:700;font-size:9.8pt;color:var(--ink)}
+.jk-foot{left:16mm;right:16mm;bottom:14mm;display:flex;justify-content:space-between;
+  font-family:Mukta,sans-serif;font-size:7.2pt;letter-spacing:.03em;color:var(--print)}
+
+/* ---------------------------------------------------------------- kraft divider leaves, one per flag */
+.dtab{right:0;width:11mm;height:30mm;z-index:2;display:flex;flex-direction:column;align-items:center;gap:1.8mm;
+  padding-top:2.6mm;background:#6f5433 url('brand/kraft-board.jpg') center/80mm;background-blend-mode:multiply;
+  border-radius:1.6mm 0 0 1.6mm;box-shadow:-.5mm .5mm 1.4mm rgba(40,24,6,.4);color:#f4ecd9}
+.dtab b{font-family:Mukta,sans-serif;font-weight:800;font-size:11pt;line-height:1}
+.dtab span{writing-mode:vertical-rl;font-family:Mukta,sans-serif;font-weight:600;font-size:6.2pt;letter-spacing:.05em;white-space:nowrap}
+.dlabel{top:56mm;left:26mm;right:30mm;padding:11mm 12mm 12mm;background:var(--bond);color:var(--ink);
+  box-shadow:0 1.2mm 3.2mm rgba(40,24,6,.32),0 .2mm .4mm rgba(40,24,6,.25)}
+.dlabel>.typed{font-weight:700;font-size:11pt}
+.d-en{font-family:Mukta,sans-serif;font-weight:800;font-size:36pt;line-height:1.02;letter-spacing:-.015em;color:var(--ink);margin-top:6mm}
+.d-q{font-size:11.6pt;line-height:1.5;color:var(--ink2);margin-top:3mm;max-width:110mm}
+.register.agencies td{padding:3.6mm 3mm 3.4mm}

@@ -1,0 +1,59 @@
+@import url('reference.css');
+/* Premium finish: a lighter reading size, full-measure screenshots, a key-point strip under each lead
+   and restrained bold emphasis on the phrases that carry each paragraph. */
+
+/* headings and lead */
+.guide .section-number{font-size:7.6pt;font-weight:700;letter-spacing:.14em;color:var(--red);margin-top:6mm;margin-bottom:2.2mm}
+.guide .section-number+h1{margin-top:0}
+.guide h1{font-size:25pt;line-height:1.05;letter-spacing:-.035em}
+.guide h1.long{font-size:22.5pt}
+.guide .lead{font-size:11pt;line-height:1.42;margin-top:3mm;color:#2b3236;max-width:178mm;text-wrap:pretty}
+.guide .lead strong{color:var(--ink)}
+
+/* key points */
+.keys{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:4.2mm;border-top:.6mm solid var(--ink);padding-top:2.6mm}
+.key{display:grid;grid-template-columns:6.5mm 1fr;align-items:start}
+.key-n{font-size:7.2pt;font-weight:700;color:var(--red);letter-spacing:.06em;padding-top:.7mm;font-variant-numeric:tabular-nums}
+.key p{font-size:9.2pt;line-height:1.3;font-weight:700;letter-spacing:-.005em;text-wrap:balance;color:var(--ink)}
+
+/* screenshots run the full text measure */
+.guide .screen-figure{margin-top:4.6mm}
+.guide .screen-figure img{width:180mm;height:auto;margin:0;border:.15mm solid #bac2c7}
+.guide .screen-figure figcaption{margin-top:1.6mm;font-size:6.8pt;letter-spacing:.02em}
+
+/* body text */
+.guide .block h2{font-size:9.8pt;line-height:1.25;margin-bottom:1.6mm;border-left-width:.6mm;padding-left:2.6mm;break-after:avoid}
+.guide .block p{font-size:9.6pt;line-height:1.42;color:#1e2528;text-wrap:pretty;orphans:3;widows:3}
+.guide .block p strong{color:#0b0e10}
+.guide .feature-columns{columns:2;column-gap:7mm;margin-top:4.6mm}
+.guide .feature-columns .block{margin-bottom:2.9mm;break-inside:avoid}
+.guide .editorial-columns{columns:2;column-gap:7.5mm;margin-top:5.5mm}
+.guide .editorial-columns .block{margin-bottom:4.4mm;break-inside:avoid}
+.guide .editorial-columns .block p{font-size:10pt;line-height:1.5}
+.guide .editorial-columns .block h2{font-size:10.4pt;margin-bottom:2mm}
+.quote{margin-top:3mm;border-top:1.2mm solid var(--red);padding-top:3.4mm;font-size:16pt;line-height:1.2;font-weight:700;letter-spacing:-.02em;text-wrap:balance}
+
+/* diagrams on the narrative pages */
+.guide .visual{margin-top:5mm;margin-bottom:0}
+.guide .architecture .layer{min-height:30mm;padding:4mm 3mm}
+.guide .architecture .core{min-height:33mm}
+.guide .architecture strong{font-size:10.4pt;margin-bottom:2.4mm}
+.guide .architecture small{font-size:8.8pt;line-height:1.4;text-wrap:balance}
+.guide .architecture .arrow{font-size:18pt}
+.guide .workflow .stage{min-height:31mm;font-size:8.8pt;padding:0 2.4mm 3mm}
+.guide .workflow .stage strong{font-size:10pt}
+.guide .workflow-note{padding:2mm 0}
+.guide .source-type{min-height:0;padding:3.6mm 3.4mm;font-size:8.9pt;line-height:1.36}
+.guide .source-type strong{font-size:10.2pt;margin-bottom:2.4mm}
+.guide .capability-strip{margin-top:5mm;font-size:9.6pt;padding:5mm 0}
+.guide .capability-strip strong{font-size:8.4pt}
+.guide .role-table{font-size:8.5pt}
+
+/* cover, contents, notes */
+.guide .cover .descriptor{font-size:18pt}
+.cover .cover-meta{font-size:8.7pt}
+.contents .toc-row{font-size:9.2pt;padding:1.1mm 0}
+.contents .toc-group{margin-top:5mm}
+.contents .toc-note{font-size:8.4pt;line-height:1.4}
+.edition-note{font-size:8.5pt;line-height:1.4;margin-top:5mm;color:var(--muted);border-top:.2mm solid var(--line);padding-top:3mm}
+.page.narrative .quote{position:absolute;left:15mm;right:15mm;bottom:21mm;margin:0}

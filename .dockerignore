@@ -1,0 +1,9 @@
+.venv
+var
+**/__pycache__
+**/*.pyc
+web/node_modules
+web/dist
+.pytest_cache
+*.db
+*.db-*

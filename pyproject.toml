@@ -1,0 +1,33 @@
+[project]
+name = "drishti"
+version = "0.1.0"
+description = "Mosaic by Weirwood: an investigation and intelligence workspace for Indian public institutions"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn>=0.30",
+  "pyyaml>=6",
+  "indic-transliteration>=2.3",
+  "python-multipart>=0.0.20",
+  "fpdf2>=2.8",
+  "numpy>=2",
+]
+
+[project.optional-dependencies]
+vision = ["opencv-python-headless>=4.10"]
+oidc = ["pyjwt[crypto]>=2.8"]
+postgres = ["psycopg[binary]>=3.2"]
+splink = ["splink>=5"]
+ml = ["numpy>=2", "scikit-learn>=1.6"]
+
+[project.scripts]
+drishti = "drishti.cli:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["drishti*"]

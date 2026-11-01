@@ -1,0 +1,602 @@
+[
+  {
+    "page": 1,
+    "kind": "cover",
+    "title": "Mosaic"
+  },
+  {
+    "page": 2,
+    "kind": "contents",
+    "title": "Contents"
+  },
+  {
+    "page": 3,
+    "kind": "article",
+    "title": "Company overview"
+  },
+  {
+    "page": 4,
+    "kind": "article",
+    "title": "The institutional problem"
+  },
+  {
+    "page": 5,
+    "kind": "article",
+    "title": "Product architecture and scope"
+  },
+  {
+    "page": 6,
+    "kind": "article",
+    "title": "The operating workflow"
+  },
+  {
+    "page": 7,
+    "kind": "article",
+    "title": "Roles and responsibilities"
+  },
+  {
+    "page": 8,
+    "kind": "article",
+    "title": "Information integrity and control"
+  },
+  {
+    "page": 9,
+    "kind": "article",
+    "title": "Deployment and integration"
+  },
+  {
+    "page": 10,
+    "kind": "article",
+    "title": "Document scope and reading guide"
+  },
+  {
+    "page": 11,
+    "kind": "chapter",
+    "title": "Workspace"
+  },
+  {
+    "page": 12,
+    "kind": "screen",
+    "title": "Workspace overview"
+  },
+  {
+    "page": 13,
+    "kind": "screen",
+    "title": "Global record search"
+  },
+  {
+    "page": 14,
+    "kind": "screen",
+    "title": "Search across scripts and spellings"
+  },
+  {
+    "page": 15,
+    "kind": "screen",
+    "title": "Case creation"
+  },
+  {
+    "page": 16,
+    "kind": "screen",
+    "title": "Investigating officer\u2019s work queue"
+  },
+  {
+    "page": 17,
+    "kind": "screen",
+    "title": "Supervisory decisions"
+  },
+  {
+    "page": 18,
+    "kind": "screen",
+    "title": "Workspace appearance"
+  },
+  {
+    "page": 19,
+    "kind": "screen",
+    "title": "Identity and session controls"
+  },
+  {
+    "page": 20,
+    "kind": "screen",
+    "title": "Role-based access refusal"
+  },
+  {
+    "page": 21,
+    "kind": "chapter",
+    "title": "Case management and evidence"
+  },
+  {
+    "page": 22,
+    "kind": "screen",
+    "title": "Case board"
+  },
+  {
+    "page": 23,
+    "kind": "screen",
+    "title": "Case-priority explanation"
+  },
+  {
+    "page": 24,
+    "kind": "screen",
+    "title": "Case lead progression"
+  },
+  {
+    "page": 25,
+    "kind": "screen",
+    "title": "Case alerts and chronology"
+  },
+  {
+    "page": 26,
+    "kind": "screen",
+    "title": "Case closure and legal holds"
+  },
+  {
+    "page": 27,
+    "kind": "screen",
+    "title": "Case network"
+  },
+  {
+    "page": 28,
+    "kind": "screen",
+    "title": "Exhibit registration"
+  },
+  {
+    "page": 29,
+    "kind": "screen",
+    "title": "Evidence locker and custody"
+  },
+  {
+    "page": 30,
+    "kind": "screen",
+    "title": "Evidence release and export"
+  },
+  {
+    "page": 31,
+    "kind": "screen",
+    "title": "Report templates"
+  },
+  {
+    "page": 32,
+    "kind": "screen",
+    "title": "Structured report composition"
+  },
+  {
+    "page": 33,
+    "kind": "screen",
+    "title": "Report content selection"
+  },
+  {
+    "page": 34,
+    "kind": "screen",
+    "title": "Draft management"
+  },
+  {
+    "page": 35,
+    "kind": "screen",
+    "title": "Recipient-specific report release"
+  },
+  {
+    "page": 36,
+    "kind": "screen",
+    "title": "Exported case report"
+  },
+  {
+    "page": 37,
+    "kind": "screen",
+    "title": "Draft evidence certificate"
+  },
+  {
+    "page": 38,
+    "kind": "chapter",
+    "title": "Investigative leads"
+  },
+  {
+    "page": 39,
+    "kind": "screen",
+    "title": "Detector finding and evidence"
+  },
+  {
+    "page": 40,
+    "kind": "screen",
+    "title": "Case request and lead disposition"
+  },
+  {
+    "page": 41,
+    "kind": "screen",
+    "title": "Approved lead in case context"
+  },
+  {
+    "page": 42,
+    "kind": "chapter",
+    "title": "Financial alerts"
+  },
+  {
+    "page": 43,
+    "kind": "screen",
+    "title": "Financial typology alerts"
+  },
+  {
+    "page": 44,
+    "kind": "screen",
+    "title": "Transaction-path examination"
+  },
+  {
+    "page": 45,
+    "kind": "chapter",
+    "title": "Watches and saved searches"
+  },
+  {
+    "page": 46,
+    "kind": "screen",
+    "title": "Entity-watch activity"
+  },
+  {
+    "page": 47,
+    "kind": "screen",
+    "title": "Geographic watch"
+  },
+  {
+    "page": 48,
+    "kind": "screen",
+    "title": "Watch configuration"
+  },
+  {
+    "page": 49,
+    "kind": "screen",
+    "title": "Saved-search review"
+  },
+  {
+    "page": 50,
+    "kind": "chapter",
+    "title": "Network analysis"
+  },
+  {
+    "page": 51,
+    "kind": "screen",
+    "title": "Network workspace"
+  },
+  {
+    "page": 52,
+    "kind": "screen",
+    "title": "Network record list"
+  },
+  {
+    "page": 53,
+    "kind": "screen",
+    "title": "Layouts and relationship filters"
+  },
+  {
+    "page": 54,
+    "kind": "screen",
+    "title": "Structural analysis"
+  },
+  {
+    "page": 55,
+    "kind": "screen",
+    "title": "Communities and connectivity"
+  },
+  {
+    "page": 56,
+    "kind": "screen",
+    "title": "Financial-flow layout"
+  },
+  {
+    "page": 57,
+    "kind": "screen",
+    "title": "Record inspection and path analysis"
+  },
+  {
+    "page": 58,
+    "kind": "chapter",
+    "title": "Entity dossier"
+  },
+  {
+    "page": 59,
+    "kind": "screen",
+    "title": "Dossier overview"
+  },
+  {
+    "page": 60,
+    "kind": "screen",
+    "title": "Case assessment and actions"
+  },
+  {
+    "page": 61,
+    "kind": "screen",
+    "title": "Protected-field access"
+  },
+  {
+    "page": 62,
+    "kind": "screen",
+    "title": "Case history and pattern findings"
+  },
+  {
+    "page": 63,
+    "kind": "screen",
+    "title": "Accounts and transaction history"
+  },
+  {
+    "page": 64,
+    "kind": "screen",
+    "title": "Entity relationship network"
+  },
+  {
+    "page": 65,
+    "kind": "screen",
+    "title": "Communication-record analysis"
+  },
+  {
+    "page": 66,
+    "kind": "screen",
+    "title": "Travel and asset records"
+  },
+  {
+    "page": 67,
+    "kind": "screen",
+    "title": "Chronological record view"
+  },
+  {
+    "page": 68,
+    "kind": "screen",
+    "title": "Source provenance"
+  },
+  {
+    "page": 69,
+    "kind": "chapter",
+    "title": "Financial transaction tracing"
+  },
+  {
+    "page": 70,
+    "kind": "screen",
+    "title": "Outward financial trace"
+  },
+  {
+    "page": 71,
+    "kind": "screen",
+    "title": "Inward financial trace"
+  },
+  {
+    "page": 72,
+    "kind": "screen",
+    "title": "Account-level financial trace"
+  },
+  {
+    "page": 73,
+    "kind": "chapter",
+    "title": "Relationship examination"
+  },
+  {
+    "page": 74,
+    "kind": "screen",
+    "title": "Relationship-enquiry setup"
+  },
+  {
+    "page": 75,
+    "kind": "screen",
+    "title": "Connections between records"
+  },
+  {
+    "page": 76,
+    "kind": "chapter",
+    "title": "Geographic investigation"
+  },
+  {
+    "page": 77,
+    "kind": "screen",
+    "title": "Geographic overview"
+  },
+  {
+    "page": 78,
+    "kind": "screen",
+    "title": "Local geographic examination"
+  },
+  {
+    "page": 79,
+    "kind": "screen",
+    "title": "Area-search parameters"
+  },
+  {
+    "page": 80,
+    "kind": "screen",
+    "title": "Area observations"
+  },
+  {
+    "page": 81,
+    "kind": "screen",
+    "title": "Observation details and coverage"
+  },
+  {
+    "page": 82,
+    "kind": "chapter",
+    "title": "Record exploration"
+  },
+  {
+    "page": 83,
+    "kind": "screen",
+    "title": "Incident overview and record access"
+  },
+  {
+    "page": 84,
+    "kind": "screen",
+    "title": "Filtered record exploration"
+  },
+  {
+    "page": 85,
+    "kind": "chapter",
+    "title": "Data preparation and publication"
+  },
+  {
+    "page": 86,
+    "kind": "screen",
+    "title": "Extract profiling"
+  },
+  {
+    "page": 87,
+    "kind": "screen",
+    "title": "Cleaning and quarantine"
+  },
+  {
+    "page": 88,
+    "kind": "screen",
+    "title": "Field and relationship mapping"
+  },
+  {
+    "page": 89,
+    "kind": "screen",
+    "title": "Incoming-record matching"
+  },
+  {
+    "page": 90,
+    "kind": "screen",
+    "title": "Pre-publication checks"
+  },
+  {
+    "page": 91,
+    "kind": "screen",
+    "title": "Proposed record changes"
+  },
+  {
+    "page": 92,
+    "kind": "screen",
+    "title": "Narrative tagging"
+  },
+  {
+    "page": 93,
+    "kind": "screen",
+    "title": "Document-reference inspection"
+  },
+  {
+    "page": 94,
+    "kind": "screen",
+    "title": "Submission for review"
+  },
+  {
+    "page": 95,
+    "kind": "screen",
+    "title": "Publication decision"
+  },
+  {
+    "page": 96,
+    "kind": "screen",
+    "title": "Published intake"
+  },
+  {
+    "page": 97,
+    "kind": "chapter",
+    "title": "Identity-match review"
+  },
+  {
+    "page": 98,
+    "kind": "screen",
+    "title": "Identity-review queue"
+  },
+  {
+    "page": 99,
+    "kind": "screen",
+    "title": "Record-pair comparison"
+  },
+  {
+    "page": 100,
+    "kind": "chapter",
+    "title": "Face-search review"
+  },
+  {
+    "page": 101,
+    "kind": "screen",
+    "title": "Probe-image registration"
+  },
+  {
+    "page": 102,
+    "kind": "screen",
+    "title": "Face selection and search purpose"
+  },
+  {
+    "page": 103,
+    "kind": "screen",
+    "title": "Candidate comparison"
+  },
+  {
+    "page": 104,
+    "kind": "screen",
+    "title": "Independent candidate review"
+  },
+  {
+    "page": 105,
+    "kind": "chapter",
+    "title": "Disaster-response operations"
+  },
+  {
+    "page": 106,
+    "kind": "screen",
+    "title": "Disaster-alert overview"
+  },
+  {
+    "page": 107,
+    "kind": "screen",
+    "title": "Alert detail and affected area"
+  },
+  {
+    "page": 108,
+    "kind": "screen",
+    "title": "Resource-dispatch record"
+  },
+  {
+    "page": 109,
+    "kind": "chapter",
+    "title": "Oversight and retention"
+  },
+  {
+    "page": 110,
+    "kind": "screen",
+    "title": "Audit and oversight workspace"
+  },
+  {
+    "page": 111,
+    "kind": "screen",
+    "title": "Targeted audit examination"
+  },
+  {
+    "page": 112,
+    "kind": "screen",
+    "title": "Transparency and retention"
+  },
+  {
+    "page": 113,
+    "kind": "chapter",
+    "title": "Product administration"
+  },
+  {
+    "page": 114,
+    "kind": "screen",
+    "title": "Detector documentation"
+  },
+  {
+    "page": 115,
+    "kind": "screen",
+    "title": "Source-quality register"
+  },
+  {
+    "page": 116,
+    "kind": "index",
+    "title": "Screen index"
+  },
+  {
+    "page": 117,
+    "kind": "index",
+    "title": "Screen index"
+  },
+  {
+    "page": 118,
+    "kind": "index",
+    "title": "Screen index"
+  },
+  {
+    "page": 119,
+    "kind": "index",
+    "title": "Screen index"
+  },
+  {
+    "page": 120,
+    "kind": "colophon",
+    "title": "Publication information"
+  }
+]

@@ -1,0 +1,37 @@
+<cap:alert xmlns:cap="urn:oasis:names:tc:emergency:cap:1.2">
+<cap:identifier>IN-1791982135638016_5</cap:identifier>
+<cap:sender>CWC</cap:sender>
+<cap:sent>2026-10-14T18:18:24+05:30</cap:sent>
+<cap:status>Actual</cap:status>
+<cap:msgType>Alert</cap:msgType>
+<cap:scope>Public</cap:scope>
+<cap:restriction/>
+<cap:addresses/>
+<cap:note/>
+<cap:incidents/>
+<cap:info>
+<cap:language>en-IN</cap:language>
+<cap:category>Met</cap:category>
+<cap:event>Flood</cap:event>
+<cap:urgency>Future</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Likely</cap:certainty>
+<cap:audience>1</cap:audience>
+<cap:effective>2026-10-14T18:00:00+05:30</cap:effective>
+<cap:onset>2026-10-14T18:18:55+05:30</cap:onset>
+<cap:expires>2026-10-15T06:00:00+05:30</cap:expires>
+<cap:headline>River Adhwara Group at Kamtaul in Darbhanga district of Bihar continues to flow in above normal flood situation at 6:00 pm today.</cap:headline>
+<cap:description>River Adhwara Group at Kamtaul in Darbhanga district of Bihar continues to flow in above normal flood situation at 6:00 pm today. At 6:00 pm, it was flowing at a level of 49.62 m with steady trend which is 0.62 m above its Warning Level of 49 m and 0.38 m below its Danger Level of 50 m.</cap:description>
+<cap:instruction/>
+<cap:contact/>
+<cap:parameter>
+<cap:valueName>Polygon URL</cap:valueName>
+<cap:value>https://sachet.ndma.gov.in/cap_public_website/FetchPolygonXMLFile?identifier=1791982135638016</cap:value>
+</cap:parameter>
+<cap:area>
+<cap:areaDesc>Adhwara Group, Kamtaul, Darbhanga, Bihar</cap:areaDesc>
+<cap:altitude>26.33</cap:altitude>
+<cap:ceiling>85.85</cap:ceiling>
+</cap:area>
+</cap:info>
+</cap:alert>

@@ -1,0 +1,288 @@
+{
+ "params": {
+  "name": {
+   "exact": [
+    0.537341,
+    4.374961719084958e-05
+   ],
+   "phonetic": [
+    0.306679,
+    8.749923438169915e-06
+   ],
+   "subset": [
+    0.000425,
+    7.374935469314644e-05
+   ],
+   "initials": [
+    0.141712,
+    3.624968281527537e-05
+   ],
+   "partial": [
+    9.1e-05,
+    0.003103722842425129
+   ],
+   "weak": [
+    0.013722,
+    0.06498568137528797
+   ],
+   "none": [
+    3e-05,
+    0.9317480972041494
+   ]
+  },
+  "father": {
+   "match": [
+    0.876442,
+    0.01645868827991895
+   ],
+   "partial": [
+    0.123254,
+    0.000953746423450912
+   ],
+   "none": [
+    0.000304,
+    0.9825875652966302
+   ]
+  },
+  "age": {
+   "close": [
+    0.999393,
+    0.06423600911496583
+   ],
+   "near": [
+    0.000455,
+    0.08189344289958912
+   ],
+   "far": [
+    0.000152,
+    0.853870547985445
+   ]
+  },
+  "district": {
+   "same": [
+    0.999545,
+    0.07064607338481654
+   ],
+   "diff": [
+    0.000455,
+    0.9293539266151835
+   ]
+  },
+  "phone": {
+   "shared": [
+    0.4,
+    1.535178618032208e-06
+   ],
+   "diff": [
+    0.6,
+    0.999998464821382
+   ]
+  },
+  "gender": {
+   "same": [
+    0.99997,
+    0.5008274979312551
+   ],
+   "diff": [
+    3e-05,
+    0.4991725020687448
+   ]
+  },
+  "identity": {
+   "same": [
+    0.97,
+    1.5349853869391163e-06
+   ],
+   "diff": [
+    0.005,
+    0.9999984650146131
+   ]
+  }
+ },
+ "review_threshold": 0.05,
+ "source": "trained_labelled",
+ "method": "m measured on labelled same-person pairs (here synthetic truth; in deployment an audited sample of 1,000-2,000 pairs), u by random sampling",
+ "trained_on": "var\\scale.db",
+ "records": 33336,
+ "trained_at": "2026-10-16T12:47:14",
+ "evaluation": [
+  {
+   "world": "world_11_700.db",
+   "records": 1090,
+   "hand_set": {
+    "auto_f1": 0.9849,
+    "auto_precision": 0.9945,
+    "auto_recall": 0.9755,
+    "review_f1": 0.967,
+    "review_recall": 0.9946,
+    "review_queue": 20,
+    "review_threshold": 0.7,
+    "true_pairs": 368,
+    "predicted_pairs": 361,
+    "true_positive_pairs": 359,
+    "false_positive_pairs": 2
+   },
+   "trained_em": {
+    "auto_f1": 0.9769,
+    "auto_precision": 0.9782,
+    "auto_recall": 0.9755,
+    "review_f1": 0.9594,
+    "review_recall": 0.9946,
+    "review_queue": 20,
+    "review_threshold": 0.2,
+    "true_pairs": 368,
+    "predicted_pairs": 367,
+    "true_positive_pairs": 359,
+    "false_positive_pairs": 8
+   },
+   "trained_labelled": {
+    "auto_f1": 0.9849,
+    "auto_precision": 0.9945,
+    "auto_recall": 0.9755,
+    "review_f1": 0.9569,
+    "review_recall": 0.9946,
+    "review_queue": 23,
+    "review_threshold": 0.05,
+    "true_pairs": 368,
+    "predicted_pairs": 361,
+    "true_positive_pairs": 359,
+    "false_positive_pairs": 2
+   }
+  },
+  {
+   "world": "world_23_1200.db",
+   "records": 1647,
+   "hand_set": {
+    "auto_f1": 0.9819,
+    "auto_precision": 0.9855,
+    "auto_recall": 0.9784,
+    "review_f1": 0.98,
+    "review_recall": 0.9976,
+    "review_queue": 19,
+    "review_threshold": 0.7,
+    "true_pairs": 417,
+    "predicted_pairs": 414,
+    "true_positive_pairs": 408,
+    "false_positive_pairs": 6
+   },
+   "trained_em": {
+    "auto_f1": 0.9808,
+    "auto_precision": 0.9831,
+    "auto_recall": 0.9784,
+    "review_f1": 0.9641,
+    "review_recall": 0.9976,
+    "review_queue": 21,
+    "review_threshold": 0.2,
+    "true_pairs": 417,
+    "predicted_pairs": 415,
+    "true_positive_pairs": 408,
+    "false_positive_pairs": 7
+   },
+   "trained_labelled": {
+    "auto_f1": 0.9867,
+    "auto_precision": 0.9951,
+    "auto_recall": 0.9784,
+    "review_f1": 0.9641,
+    "review_recall": 0.9976,
+    "review_queue": 22,
+    "review_threshold": 0.05,
+    "true_pairs": 417,
+    "predicted_pairs": 410,
+    "true_positive_pairs": 408,
+    "false_positive_pairs": 2
+   }
+  },
+  {
+   "world": "world_47_1800.db",
+   "records": 2304,
+   "hand_set": {
+    "auto_f1": 0.9591,
+    "auto_precision": 0.9488,
+    "auto_recall": 0.9695,
+    "review_f1": 0.9308,
+    "review_recall": 0.9956,
+    "review_queue": 43,
+    "review_threshold": 0.7,
+    "true_pairs": 459,
+    "predicted_pairs": 469,
+    "true_positive_pairs": 445,
+    "false_positive_pairs": 24
+   },
+   "trained_em": {
+    "auto_f1": 0.9759,
+    "auto_precision": 0.9823,
+    "auto_recall": 0.9695,
+    "review_f1": 0.9195,
+    "review_recall": 0.9956,
+    "review_queue": 45,
+    "review_threshold": 0.2,
+    "true_pairs": 459,
+    "predicted_pairs": 453,
+    "true_positive_pairs": 445,
+    "false_positive_pairs": 8
+   },
+   "trained_labelled": {
+    "auto_f1": 0.9802,
+    "auto_precision": 0.9911,
+    "auto_recall": 0.9695,
+    "review_f1": 0.9177,
+    "review_recall": 0.9956,
+    "review_queue": 49,
+    "review_threshold": 0.05,
+    "true_pairs": 459,
+    "predicted_pairs": 449,
+    "true_positive_pairs": 445,
+    "false_positive_pairs": 4
+   }
+  },
+  {
+   "world": "world_91_1500.db",
+   "records": 1977,
+   "hand_set": {
+    "auto_f1": 0.9816,
+    "auto_precision": 0.9816,
+    "auto_recall": 0.9816,
+    "review_f1": 0.9352,
+    "review_recall": 0.9977,
+    "review_queue": 29,
+    "review_threshold": 0.7,
+    "true_pairs": 434,
+    "predicted_pairs": 434,
+    "true_positive_pairs": 426,
+    "false_positive_pairs": 8
+   },
+   "trained_em": {
+    "auto_f1": 0.9816,
+    "auto_precision": 0.9816,
+    "auto_recall": 0.9816,
+    "review_f1": 0.9312,
+    "review_recall": 0.9977,
+    "review_queue": 36,
+    "review_threshold": 0.2,
+    "true_pairs": 434,
+    "predicted_pairs": 434,
+    "true_positive_pairs": 426,
+    "false_positive_pairs": 8
+   },
+   "trained_labelled": {
+    "auto_f1": 0.9884,
+    "auto_precision": 0.9953,
+    "auto_recall": 0.9816,
+    "review_f1": 0.9252,
+    "review_recall": 0.9977,
+    "review_queue": 43,
+    "review_threshold": 0.05,
+    "true_pairs": 434,
+    "predicted_pairs": 428,
+    "true_positive_pairs": 426,
+    "false_positive_pairs": 2
+   }
+  }
+ ],
+ "gate": {
+  "candidate": "trained_labelled",
+  "passed": true,
+  "reasons": [],
+  "policy": "No additional false pairs, lower precision or lower recall after review on any holdout, plus higher mean F1"
+ }
+}

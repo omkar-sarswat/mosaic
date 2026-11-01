@@ -1,0 +1,63 @@
+<cap:alert xmlns:cap="urn:oasis:names:tc:emergency:cap:1.2">
+<cap:identifier>IN-1791980762566009_9</cap:identifier>
+<cap:sender>Uttarakhand-SDMA</cap:sender>
+<cap:sent>2026-10-14T17:58:47+05:30</cap:sent>
+<cap:status>Actual</cap:status>
+<cap:msgType>Update</cap:msgType>
+<cap:scope>Public</cap:scope>
+<cap:restriction/>
+<cap:addresses/>
+<cap:note/>
+<cap:references>IMD-Dehradun,IN-1791980762566009_65,2026-10-14T17:55:40+05:30</cap:references>
+<cap:incidents/>
+<cap:info>
+<cap:language>HI</cap:language>
+<cap:category>Met</cap:category>
+<cap:event>Thunderstorm with Lightning</cap:event>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:audience>1</cap:audience>
+<cap:effective>2026-10-14T17:54:00+05:30</cap:effective>
+<cap:onset>2026-10-14T17:58:47+05:30</cap:onset>
+<cap:expires>2026-10-14T20:54:00+05:30</cap:expires>
+<cap:headline>अगले 3 घंटों में चमोली, रुद्रप्रयाग, टिहरी गढ़वाल, उत्तरकाशी, बागेश्वर, पौरी गढ़वाल, पिथौरागढ में अलग-अलग स्थानों पर गरज/बिजली/तेज हवाओं  के साथ हल्की बारिश होने की संभावना है।</cap:headline>
+<cap:description/>
+<cap:instruction>Please follow SDMA guidelines.</cap:instruction>
+<cap:contact/>
+<cap:parameter>
+<cap:valueName>Polygon URL</cap:valueName>
+<cap:value>https://sachet.ndma.gov.in/cap_public_website/FetchPolygonXMLFile?identifier=1791980762566009</cap:value>
+</cap:parameter>
+<cap:area>
+<cap:areaDesc>isolated places over  Uttarkashi, Rudraprayag, Chamoli, Bageshwar and Pithoragarh, </cap:areaDesc>
+<cap:altitude>0.0</cap:altitude>
+<cap:ceiling>0.0</cap:ceiling>
+</cap:area>
+</cap:info>
+<cap:info>
+<cap:language>en-IN</cap:language>
+<cap:category>Met</cap:category>
+<cap:event>Thunderstorm with Lightning</cap:event>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:audience>1</cap:audience>
+<cap:effective>2026-10-14T17:54:00+05:30</cap:effective>
+<cap:onset>2026-10-14T17:58:47+05:30</cap:onset>
+<cap:expires>2026-10-14T20:54:00+05:30</cap:expires>
+<cap:headline>Light rain accompanied with Thunderstorm / Lightning/gusty winds(30-40kmph) is likely to occur at isolated places over Chamoli, Rudraprayag, Tehri Garhwal, Uttarkashi, Bageshwar, Pauri Garhwal, Pithoragarh in next 3 hours.</cap:headline>
+<cap:description/>
+<cap:instruction>Please follow SDMA guidelines.</cap:instruction>
+<cap:contact/>
+<cap:parameter>
+<cap:valueName>Polygon URL</cap:valueName>
+<cap:value>https://sachet.ndma.gov.in/cap_public_website/FetchPolygonXMLFile?identifier=1791980762566009</cap:value>
+</cap:parameter>
+<cap:area>
+<cap:areaDesc>isolated places over  Uttarkashi, Rudraprayag, Chamoli, Bageshwar and Pithoragarh, </cap:areaDesc>
+<cap:altitude>0</cap:altitude>
+<cap:ceiling>0</cap:ceiling>
+</cap:area>
+</cap:info>
+</cap:alert>

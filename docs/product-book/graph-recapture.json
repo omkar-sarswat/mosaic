@@ -1,0 +1,227 @@
+{
+  "revision": "Selected entities, separated connections and visible direction arrows",
+  "date": "2026-10-21",
+  "capture_method": "Chrome browser screenshots of the application; original pixel data retained without compositing.",
+  "data_source": "Isolated copy of the original synthetic demonstration snapshot, before background-data expansion.",
+  "changes": [
+    "Opaque semantic relationship colours",
+    "Minimum graph line thickness of 1.6 screen pixels",
+    "Visible background connections during selection",
+    "Larger graph fitting margins",
+    "Stronger financial-flow lines and return arcs",
+    "Wider browser framing for complete financial routes",
+    "Light appearance for all recaptured screens",
+    "Entity selected before each of the ten node-link graph captures",
+    "Live UI node dragging separates relationships and keeps records above selection controls",
+    "Larger direction arrowheads and a taller Connections canvas",
+    "Focused company neighbourhood used for the case and dossier examples"
+  ],
+  "screens": [
+    {
+      "image": "07-network-money",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=graph&case=CASE-2026-F13C17&id=person:542372200968166a",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "f4f98d752033359cda59ea68731de2837781ee8235087f8953322d3ba2795eea",
+      "errors": []
+    },
+    {
+      "image": "01-light-theme",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=dossier&case=CASE-2026-F13C17&id=person:542372200968166a",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "cec618dbc33792c0c34ecd27ac8e1fbb3699de6be201fbaf1b4fbceeb06d3a96",
+      "errors": []
+    },
+    {
+      "image": "13-studio-checks",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=studio&case=CASE-2026-F13C17",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "748512e71460785834b4d0d21dee8ff2377fdc402035c7bbc39b56d02a8688bb",
+      "errors": []
+    },
+    {
+      "image": "09-money",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=money&case=CASE-2026-F13C17&id=bankaccount:8d0d3a68ca3f9fa2",
+      "size": [
+        3280,
+        2050
+      ],
+      "sha256": "667212a5e54277f59f8369d01177d72dfdd9f771a4d823f71cc43b31894e45c3",
+      "errors": []
+    },
+    {
+      "image": "09-money-accounts",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=money&case=CASE-2026-F13C17&id=bankaccount:8d0d3a68ca3f9fa2",
+      "size": [
+        3280,
+        2050
+      ],
+      "sha256": "95db3391f69d2222ec5e234b467daaca59e8d731e0a15d3c99ca9d53fc08c06a",
+      "errors": []
+    },
+    {
+      "image": "09-money-in",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=money&case=CASE-2026-F13C17&id=bankaccount:8d0d3a68ca3f9fa2",
+      "size": [
+        3310,
+        2068
+      ],
+      "sha256": "84fdaf38b834db4086f5872f8b7dea9fd95600f8ea7a6ef29e710ba0cc379565",
+      "errors": []
+    },
+    {
+      "image": "07-network",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=graph&case=CASE-2026-F13C17&id=organisation:44171f142996b2ab",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "fcec9869a7d62673e48e6e7e612f70fbe0153356faeefdac4c57e9c7e75b894b",
+      "errors": [],
+      "selected_record": "Zenova Trading Pvt Ltd",
+      "selection": "Entity clicked in the live graph before capture",
+      "layout": "force"
+    },
+    {
+      "image": "07-network-inspector",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=graph&case=CASE-2026-F13C17&id=organisation:44171f142996b2ab",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "2e71a1415904c2a9bf525fd2e6d438a12f0baad43cb604a0896846e79c0c0208",
+      "errors": [],
+      "selected_record": "Zenova Trading Pvt Ltd",
+      "selection": "Entity clicked in the live graph before capture",
+      "layout": "force"
+    },
+    {
+      "image": "07-network-list",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=graph&case=CASE-2026-F13C17&id=organisation:44171f142996b2ab",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "ab2be72979bd7195462de590188c738ee400d412ef72e2f78971e1700eeadffc",
+      "errors": [],
+      "selected_record": "Zenova Trading Pvt Ltd",
+      "selection": "Entity clicked in the live graph before capture",
+      "layout": "force"
+    },
+    {
+      "image": "07-network-analysis",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=graph&case=CASE-2026-F13C17&id=organisation:44171f142996b2ab",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "d2a8272d67efece0df7b32555e3b7231c4efb9a3f50128feb6f67fb63600dc17",
+      "errors": [],
+      "selected_record": "Zenova Trading Pvt Ltd",
+      "selection": "Entity clicked in the live graph before capture",
+      "layout": "force"
+    },
+    {
+      "image": "07-network-types",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=graph&case=CASE-2026-F13C17&id=organisation:44171f142996b2ab",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "97440efa6ec826fecdbbd0a6fc563002b469025118c62d006d8ce43e0857949a",
+      "errors": [],
+      "selected_record": "Zenova Trading Pvt Ltd",
+      "selection": "Entity clicked in the live graph before capture",
+      "layout": "types"
+    },
+    {
+      "image": "07-network-community",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=graph&case=CASE-2026-F13C17&id=organisation:44171f142996b2ab",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "f2411ad13e9016c614beef211078d62aa77be308745234782afd10a671355753",
+      "errors": [],
+      "selected_record": "Zenova Trading Pvt Ltd",
+      "selection": "Entity clicked in the live graph before capture",
+      "layout": "communities"
+    },
+    {
+      "image": "03-case-network",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=cases&case=CASE-2026-F13C17",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "8121083c166d8a457b512fa1fc568e480077c20bbc74444538f50b652d38ec20",
+      "errors": [],
+      "selected_record": "Zenova Trading Pvt Ltd",
+      "selection": "Entity clicked in the live graph before capture",
+      "layout": "neighborhood"
+    },
+    {
+      "image": "08-dossier-network",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=dossier&case=CASE-2026-F13C17&id=organisation:44171f142996b2ab",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "9507d30e72f5d2ad82449fc714b371d3ee8406754b33834e25a773cba54beb4c",
+      "errors": [],
+      "selected_record": "Zenova Trading Pvt Ltd",
+      "selection": "Entity clicked in the live graph before capture",
+      "layout": "force"
+    },
+    {
+      "image": "10-connect-start",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=connect&case=CASE-2026-F13C17&id=person:9db444ae50384d1f",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "0662904415cd6acb582dc34f3a02d498c0e30df4385a08548f51bf860c5447e6",
+      "errors": [],
+      "selected_record": "Sameer Abdul Sayyed",
+      "selection": "Entity clicked in the live graph before capture",
+      "layout": "force"
+    },
+    {
+      "image": "10-connect",
+      "theme": "light",
+      "url": "http://127.0.0.1:8010/?user=ed.dd&view=connect&case=CASE-2026-F13C17&id=person:9db444ae50384d1f",
+      "size": [
+        2880,
+        1800
+      ],
+      "sha256": "98f5f30bcd79ed77eecb472fd1fe3fa9d9849cbf37dba92466e5ba0ded6e51b7",
+      "errors": [],
+      "selected_record": "Sameer Abdul Sayyed",
+      "selection": "Entity clicked in the live graph before capture",
+      "layout": "force"
+    }
+  ]
+}

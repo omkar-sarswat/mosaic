@@ -1,0 +1,494 @@
+@font-face {
+    font-family: Heros;
+    src: url('fonts/heros-regular.otf') format('opentype');
+    font-weight: 400;
+    font-display: block;
+}
+@font-face {
+    font-family: Heros;
+    src: url('fonts/heros-bold.otf') format('opentype');
+    font-weight: 700;
+    font-display: block;
+}
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+:root {
+    --ink: #191b1d;
+    --quiet: #62676b;
+    --red: #b32928;
+    --line: #c8cbcd;
+    --paper: #fff;
+    --soft: #f3f4f4;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #e3e4e5;
+    color: var(--ink);
+    font-family: Heros, Arial, sans-serif;
+    font-size: 10.5pt;
+    font-weight: 400;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.page {
+    width: 210mm;
+    height: 297mm;
+    background: var(--paper);
+    position: relative;
+    padding: 13mm 14mm 17mm;
+    break-after: page;
+    overflow: hidden;
+}
+
+.page:last-child { break-after: auto; }
+
+p, h1, h2, h3, figure { margin: 0; }
+p { orphans: 3; widows: 3; }
+a { color: inherit; text-decoration: none; }
+b, strong { font-weight: 700; }
+
+/* ---------- running furniture ---------- */
+
+.running {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    font-size: 7.2pt;
+    line-height: 1.2;
+    color: var(--quiet);
+    letter-spacing: .065em;
+    text-transform: uppercase;
+    height: 5mm;
+}
+.running span:nth-child(2) { text-align: center; }
+.running span:nth-child(3) { text-align: right; }
+.running .imprint { color: var(--ink); font-weight: 700; }
+
+.page-title {
+    font-size: 30pt;
+    line-height: 1.04;
+    letter-spacing: -.026em;
+    font-weight: 400;
+    margin-top: 8mm;
+    max-width: 182mm;
+}
+.page-title.long { font-size: 26pt; }
+
+.foot {
+    position: absolute;
+    left: 14mm;
+    right: 14mm;
+    bottom: 8mm;
+    display: grid;
+    grid-template-columns: 1fr 1fr 14mm;
+    align-items: end;
+    font-size: 7pt;
+    color: var(--quiet);
+    line-height: 1.2;
+}
+.foot .folio {
+    text-align: right;
+    color: var(--ink);
+    font-size: 10pt;
+    font-variant-numeric: tabular-nums;
+}
+.foot .middle { text-align: right; padding-right: 5mm; }
+
+/* ---------- article / company pages ---------- */
+
+.article-grid {
+    display: grid;
+    grid-template-columns: 43mm 1fr;
+    gap: 7mm;
+    margin-top: 12mm;
+}
+
+.lead {
+    font-size: 13.2pt;
+    line-height: 1.34;
+    letter-spacing: -.008em;
+    padding-right: 1mm;
+}
+
+.article-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8mm;
+    font-size: 9.7pt;
+    line-height: 1.43;
+}
+.article-body h2 {
+    font-size: 9.7pt;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 2.3mm;
+}
+.article-body .block + .block { margin-top: 6mm; }
+
+.article-label {
+    font-size: 7.2pt;
+    color: var(--quiet);
+    margin-bottom: 4mm;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+}
+
+.chapter .chapter-num {
+    position: absolute;
+    top: 25mm;
+    left: 14mm;
+    color: var(--red);
+    font-size: 50pt;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -.05em;
+}
+.chapter .page-title {
+    margin-left: 49mm;
+    max-width: 133mm;
+    min-height: 20mm;
+    padding-top: 2mm;
+}
+.chapter .article-grid { margin-top: 9mm; }
+.chapter .article-body {
+    display: block;
+    columns: 2;
+    column-gap: 8mm;
+}
+.chapter .article-body .block {
+    break-inside: avoid;
+    margin-top: 0;
+    margin-bottom: 6mm;
+}
+.chapter .lead { font-size: 12.7pt; }
+.chapter .scope {
+    margin-top: 11mm;
+    border-top: .3mm solid var(--red);
+    padding-top: 3mm;
+    font-size: 7.5pt;
+    line-height: 1.38;
+    color: var(--quiet);
+}
+
+/* ---------- screen pages ---------- */
+
+.screen .page-title {
+    font-size: 25pt;
+    margin-top: 7mm;
+    max-width: 182mm;
+}
+.screen .page-title.long { font-size: 22pt; }
+
+.figure-layout {
+    display: block;
+    margin-top: 8mm;
+}
+.figure-image {
+    width: 100%;
+    max-height: 124mm;
+    object-fit: contain;
+    object-position: top left;
+    display: block;
+    border: .15mm solid #d4d7da;
+}
+.figure-caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 5mm;
+    font-size: 6.9pt;
+    line-height: 1.25;
+    color: var(--quiet);
+    margin-top: 2mm;
+}
+.figure-caption span:last-child { text-align: right; }
+
+.annotation {
+    margin-top: 7mm;
+    font-size: 9.1pt;
+    line-height: 1.42;
+}
+.annotation-label {
+    font-size: 7pt;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    color: var(--quiet);
+    margin-bottom: 2.5mm;
+}
+.annotation .control-list {
+    margin-top: 4mm;
+    columns: 2;
+    column-gap: 8mm;
+}
+.control {
+    margin-bottom: 2.8mm;
+    break-inside: avoid;
+}
+.control .number {
+    color: var(--red);
+    font-size: 7.2pt;
+    margin-right: 1.2mm;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+}
+.operation-note {
+    margin-top: 4mm;
+    padding-top: 3mm;
+    border-top: .15mm solid var(--line);
+    display: grid;
+    grid-template-columns: 25mm 1fr;
+    gap: 4mm;
+    font-size: 8.7pt;
+    line-height: 1.38;
+}
+.operation-note .label {
+    font-size: 6.8pt;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--quiet);
+    padding-top: .3mm;
+}
+.under-controls {
+    display: none;
+}
+
+/* Dense pages: reserve a little less image height so explanations remain substantial. */
+.screen.dense .figure-image { max-height: 100mm; }
+.screen.dense .annotation {
+    font-size: 8.9pt;
+    line-height: 1.4;
+}
+
+/* Portrait reports: image + explanation side by side. */
+.screen.portrait .figure-layout {
+    display: grid;
+    grid-template-columns: 88mm 1fr;
+    gap: 8mm;
+    align-items: start;
+}
+.screen.portrait .figure-image {
+    width: 82mm;
+    max-width: 82mm;
+    max-height: 137mm;
+    height: auto;
+    margin: 0 auto;
+}
+.screen.portrait .annotation {
+    margin-top: 0;
+    padding-top: 1mm;
+    font-size: 8.9pt;
+    line-height: 1.42;
+}
+.screen.portrait .annotation .control-list {
+    columns: 1;
+    margin-top: 5mm;
+}
+.screen.portrait .operation-note {
+    display: block;
+    margin-top: 6mm;
+}
+.screen.portrait .operation-note .label {
+    display: block;
+    margin-bottom: 2mm;
+}
+
+/* ---------- contents ---------- */
+
+.contents .page-title { font-size: 34pt; }
+
+.contents-grid {
+    display: grid;
+    grid-template-columns: 43mm 1fr 1fr;
+    gap: 7mm;
+    margin-top: 11mm;
+}
+.contents-intro {
+    font-size: 11.5pt;
+    line-height: 1.38;
+    padding-right: 1mm;
+}
+.toc-column { padding-left: 4mm; }
+.toc-label {
+    font-size: 7.3pt;
+    color: var(--quiet);
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    margin-bottom: 3mm;
+}
+.toc-row {
+    display: grid;
+    grid-template-columns: 1fr 9mm;
+    gap: 3mm;
+    padding: 2.2mm 0;
+    border-top: .15mm solid var(--line);
+    font-size: 8.8pt;
+    line-height: 1.18;
+}
+.toc-row .num {
+    text-align: right;
+    color: var(--red);
+    font-variant-numeric: tabular-nums;
+}
+.toc-number {
+    display: inline-block;
+    color: var(--quiet);
+    font-size: 7.4pt;
+    width: 7mm;
+}
+.contents-note {
+    margin-top: 8mm;
+    font-size: 7.8pt;
+    line-height: 1.43;
+    color: var(--quiet);
+}
+
+/* ---------- cover ---------- */
+
+.cover { padding-top: 13mm; }
+.cover .cover-brand {
+    display: flex;
+    align-items: center;
+    gap: 3.5mm;
+    font-size: 10.5pt;
+    letter-spacing: .09em;
+    font-weight: 700;
+}
+.cover .cover-brand img {
+    height: 11mm;
+    width: 11mm;
+    object-fit: contain;
+}
+.cover .edition {
+    position: absolute;
+    top: 16mm;
+    right: 14mm;
+    font-size: 7.5pt;
+    color: var(--quiet);
+}
+.cover h1 {
+    font-size: 72pt;
+    line-height: .92;
+    letter-spacing: -.06em;
+    font-weight: 400;
+    margin-top: 14mm;
+}
+.cover .cover-subtitle {
+    margin-top: 5mm;
+    font-size: 16pt;
+    line-height: 1.16;
+    letter-spacing: -.018em;
+    width: 80mm;
+}
+.cover .cover-red {
+    display: block;
+    width: 11mm;
+    height: 1mm;
+    background: var(--red);
+    margin-top: 6mm;
+}
+.cover .cover-description {
+    font-size: 8.7pt;
+    line-height: 1.42;
+    max-width: 67mm;
+    margin-top: 7mm;
+}
+.cover .cover-description p + p { margin-top: 3.5mm; }
+.cover .cover-figure {
+    position: absolute;
+    left: 14mm;
+    right: 14mm;
+    top: 121mm;
+    width: auto;
+}
+.cover .cover-figure img {
+    width: 100%;
+    max-height: 115mm;
+    object-fit: contain;
+    object-position: left top;
+    display: block;
+    border: .15mm solid var(--line);
+}
+.cover .cover-figure figcaption {
+    font-size: 6.9pt;
+    line-height: 1.3;
+    margin-top: 2mm;
+    color: var(--quiet);
+}
+.cover .foot { color: var(--ink); }
+
+/* ---------- index ---------- */
+
+.index-layout {
+    margin-top: 9mm;
+    display: grid;
+    grid-template-columns: 40mm 1fr;
+    gap: 6mm;
+}
+.index-intro {
+    font-size: 10.5pt;
+    line-height: 1.34;
+    padding-right: 2mm;
+}
+.index-rows {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 7mm;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(11, auto);
+}
+.index-row {
+    display: grid;
+    grid-template-columns: 1fr 9mm;
+    gap: 3mm;
+    border-top: .15mm solid var(--line);
+    padding: 1.9mm 0;
+    font-size: 7.8pt;
+    line-height: 1.12;
+    break-inside: avoid;
+}
+.index-row small {
+    display: block;
+    font-size: 6pt;
+    line-height: 1.1;
+    color: var(--quiet);
+    margin-bottom: .7mm;
+}
+.index-row .num {
+    color: var(--red);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ---------- colophon ---------- */
+
+.colophon .article-grid { margin-top: 13mm; }
+.colophon .source-list {
+    font-size: 8.8pt;
+    line-height: 1.42;
+}
+.colophon .source-list p + p { margin-top: 4mm; }
+.colophon .source-list a { border-bottom: .2mm solid #aaa; }
+
+/* ---------- screen / print ---------- */
+
+@media screen {
+    .page {
+        margin: 20px auto;
+        box-shadow: 0 2px 9px #0002;
+    }
+}
+@media print {
+    html, body { background: white; }
+    .page { margin: 0; box-shadow: none; }
+}

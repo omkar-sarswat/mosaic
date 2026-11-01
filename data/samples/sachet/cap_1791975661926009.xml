@@ -1,0 +1,63 @@
+<cap:alert xmlns:cap="urn:oasis:names:tc:emergency:cap:1.2">
+<cap:identifier>IN-1791975661926009_9</cap:identifier>
+<cap:sender>Uttarakhand-SDMA</cap:sender>
+<cap:sent>2026-10-14T16:33:17+05:30</cap:sent>
+<cap:status>Actual</cap:status>
+<cap:msgType>Update</cap:msgType>
+<cap:scope>Public</cap:scope>
+<cap:restriction/>
+<cap:addresses/>
+<cap:note/>
+<cap:references>IMD-Dehradun,IN-1791975661926009_65,2026-10-14T16:30:38+05:30</cap:references>
+<cap:incidents/>
+<cap:info>
+<cap:language>en-IN</cap:language>
+<cap:category>Met</cap:category>
+<cap:event>Thunderstorm with Lightning</cap:event>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:audience>1</cap:audience>
+<cap:effective>2026-10-14T16:29:00+05:30</cap:effective>
+<cap:onset>2026-10-14T16:33:17+05:30</cap:onset>
+<cap:expires>2026-10-14T19:29:00+05:30</cap:expires>
+<cap:headline>2026/10/14 16:29 Thunderstorm with Lightning, gusty winds(30-40kmph) likely to occur at isolated places over Almora, Chamoli, Pauri Garhwal in next 3 hours.</cap:headline>
+<cap:description/>
+<cap:instruction>Please follow SDMA guidelines.</cap:instruction>
+<cap:contact/>
+<cap:parameter>
+<cap:valueName>Polygon URL</cap:valueName>
+<cap:value>https://sachet.ndma.gov.in/cap_public_website/FetchPolygonXMLFile?identifier=1791975661926009</cap:value>
+</cap:parameter>
+<cap:area>
+<cap:areaDesc>pauri almora chamoli</cap:areaDesc>
+<cap:altitude>0</cap:altitude>
+<cap:ceiling>0</cap:ceiling>
+</cap:area>
+</cap:info>
+<cap:info>
+<cap:language>HI</cap:language>
+<cap:category>Met</cap:category>
+<cap:event>Thunderstorm with Lightning</cap:event>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:audience>1</cap:audience>
+<cap:effective>2026-10-14T16:29:00+05:30</cap:effective>
+<cap:onset>2026-10-14T16:33:17+05:30</cap:onset>
+<cap:expires>2026-10-14T19:29:00+05:30</cap:expires>
+<cap:headline>14/10/2026 16:29 अगले 3 घंटों में अल्मोड़ा, चमोली और पौड़ी गढ़वाल में कुछ जगहों पर बिजली कड़कने और तेज़ हवाओं (30-40 किमी/घंटा) के साथ आंधी-तूफान आने की संभावना है।</cap:headline>
+<cap:description/>
+<cap:instruction>Please follow SDMA guidelines.</cap:instruction>
+<cap:contact/>
+<cap:parameter>
+<cap:valueName>Polygon URL</cap:valueName>
+<cap:value>https://sachet.ndma.gov.in/cap_public_website/FetchPolygonXMLFile?identifier=1791975661926009</cap:value>
+</cap:parameter>
+<cap:area>
+<cap:areaDesc>pauri almora chamoli</cap:areaDesc>
+<cap:altitude>0</cap:altitude>
+<cap:ceiling>0</cap:ceiling>
+</cap:area>
+</cap:info>
+</cap:alert>

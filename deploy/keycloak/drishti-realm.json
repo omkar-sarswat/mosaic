@@ -1,0 +1,246 @@
+{
+  "realm": "drishti",
+  "displayName": "Mosaic",
+  "enabled": true,
+  "sslRequired": "external",
+  "bruteForceProtected": true,
+  "accessTokenLifespan": 300,
+  "roles": {
+    "realm": [
+      {
+        "name": "io",
+        "description": "Investigating officer"
+      },
+      {
+        "name": "supervisor",
+        "description": "SP / DCP: approves expansions"
+      },
+      {
+        "name": "analyst",
+        "description": "SCRB / cyber-cell analyst"
+      },
+      {
+        "name": "viewer",
+        "description": "Read-only within clearance"
+      },
+      {
+        "name": "operator",
+        "description": "SDMA control-room operator"
+      },
+      {
+        "name": "collector",
+        "description": "District Collector"
+      },
+      {
+        "name": "steward",
+        "description": "Data steward"
+      },
+      {
+        "name": "auditor",
+        "description": "Independent oversight officer"
+      },
+      {
+        "name": "admin",
+        "description": "Platform administrator (no data access)"
+      }
+    ]
+  },
+  "components": {
+    "org.keycloak.userprofile.UserProfileProvider": [
+      {
+        "providerId": "declarative-user-profile",
+        "subComponents": {},
+        "config": {
+          "kc.user.profile.config": [
+            "{\"unmanagedAttributePolicy\":\"ADMIN_EDIT\",\"attributes\":[{\"name\":\"username\",\"displayName\":\"${username}\",\"permissions\":{\"view\":[\"admin\",\"user\"],\"edit\":[\"admin\"]},\"validations\":{\"length\":{\"min\":3,\"max\":255}}},{\"name\":\"email\",\"displayName\":\"${email}\",\"permissions\":{\"view\":[\"admin\",\"user\"],\"edit\":[\"admin\"]},\"validations\":{\"email\":{}}},{\"name\":\"firstName\",\"displayName\":\"${firstName}\",\"permissions\":{\"view\":[\"admin\",\"user\"],\"edit\":[\"admin\"]}},{\"name\":\"lastName\",\"displayName\":\"${lastName}\",\"permissions\":{\"view\":[\"admin\",\"user\"],\"edit\":[\"admin\"]}}],\"groups\":[]}"
+          ]
+        }
+      }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "drishti-web",
+      "name": "Mosaic web",
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "redirectUris": [
+        "http://localhost:8000/*",
+        "http://localhost:5173/*"
+      ],
+      "webOrigins": [
+        "http://localhost:8000",
+        "http://localhost:5173"
+      ],
+      "attributes": {
+        "pkce.code.challenge.method": "S256",
+        "post.logout.redirect.uris": "http://localhost:8000/*##http://localhost:5173/*"
+      },
+      "protocolMappers": [
+        {
+          "name": "audience drishti-api",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-audience-mapper",
+          "config": {
+            "included.custom.audience": "drishti-api",
+            "access.token.claim": "true",
+            "id.token.claim": "false"
+          }
+        },
+        {
+          "name": "clearance",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "config": {
+            "user.attribute": "clearance",
+            "claim.name": "clearance",
+            "jsonType.label": "int",
+            "access.token.claim": "true",
+            "id.token.claim": "true"
+          }
+        },
+        {
+          "name": "districts",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "config": {
+            "user.attribute": "districts",
+            "claim.name": "districts",
+            "jsonType.label": "String",
+            "access.token.claim": "true",
+            "id.token.claim": "true"
+          }
+        },
+        {
+          "name": "agency",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "config": {
+            "user.attribute": "agency",
+            "claim.name": "agency",
+            "jsonType.label": "String",
+            "access.token.claim": "true",
+            "id.token.claim": "true"
+          }
+        }
+      ],
+      "implicitFlowEnabled": false,
+      "serviceAccountsEnabled": false,
+      "frontchannelLogout": true,
+      "fullScopeAllowed": true
+    }
+  ],
+  "users": [
+    {
+      "username": "io.pune",
+      "enabled": true,
+      "firstName": "Investigating Officer",
+      "lastName": "Pune Cyber PS",
+      "email": "io.pune@drishti.invalid",
+      "emailVerified": true,
+      "attributes": {
+        "clearance": [
+          "2"
+        ],
+        "districts": [
+          "490"
+        ],
+        "agency": [
+          "STATE-POLICE-MH"
+        ]
+      },
+      "realmRoles": [
+        "io"
+      ],
+      "requiredActions": [
+        "UPDATE_PASSWORD",
+        "CONFIGURE_TOTP"
+      ]
+    },
+    {
+      "username": "sp.pune",
+      "enabled": true,
+      "firstName": "Superintendent of Police",
+      "lastName": "Pune Rural",
+      "email": "sp.pune@drishti.invalid",
+      "emailVerified": true,
+      "attributes": {
+        "clearance": [
+          "2"
+        ],
+        "districts": [
+          "490,487,494"
+        ],
+        "agency": [
+          "STATE-POLICE-MH"
+        ]
+      },
+      "realmRoles": [
+        "supervisor"
+      ],
+      "requiredActions": [
+        "UPDATE_PASSWORD",
+        "CONFIGURE_TOTP"
+      ]
+    },
+    {
+      "username": "auditor.oversight",
+      "enabled": true,
+      "firstName": "Oversight",
+      "lastName": "Officer",
+      "email": "auditor@drishti.invalid",
+      "emailVerified": true,
+      "attributes": {
+        "clearance": [
+          "0"
+        ],
+        "districts": [
+          "*"
+        ],
+        "agency": [
+          "OVERSIGHT"
+        ]
+      },
+      "realmRoles": [
+        "auditor"
+      ],
+      "requiredActions": [
+        "UPDATE_PASSWORD",
+        "CONFIGURE_TOTP"
+      ]
+    }
+  ],
+  "registrationAllowed": false,
+  "resetPasswordAllowed": false,
+  "loginWithEmailAllowed": false,
+  "passwordPolicy": "length(12) and maxLength(128) and notUsername and notEmail and passwordHistory(5) and digits(1) and upperCase(1) and specialChars(1)",
+  "otpPolicyType": "totp",
+  "otpPolicyAlgorithm": "HmacSHA1",
+  "otpPolicyDigits": 6,
+  "otpPolicyPeriod": 30,
+  "failureFactor": 5,
+  "permanentLockout": false,
+  "waitIncrementSeconds": 60,
+  "maxFailureWaitSeconds": 900,
+  "minimumQuickLoginWaitSeconds": 60,
+  "quickLoginCheckMilliSeconds": 1000,
+  "ssoSessionIdleTimeout": 1800,
+  "ssoSessionMaxLifespan": 36000,
+  "revokeRefreshToken": true,
+  "refreshTokenMaxReuse": 0,
+  "eventsEnabled": true,
+  "eventsExpiration": 7776000,
+  "adminEventsEnabled": true,
+  "adminEventsDetailsEnabled": false,
+  "enabledEventTypes": [
+    "LOGIN",
+    "LOGIN_ERROR",
+    "LOGOUT",
+    "CODE_TO_TOKEN_ERROR",
+    "REFRESH_TOKEN_ERROR",
+    "UPDATE_PASSWORD",
+    "UPDATE_TOTP",
+    "REMOVE_TOTP"
+  ]
+}

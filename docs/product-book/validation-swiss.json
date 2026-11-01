@@ -1,0 +1,1099 @@
+{
+  "edition": "A4 portrait editorial edition",
+  "page_mm": [
+    210,
+    297
+  ],
+  "pages_expected": 120,
+  "screen_pages": 88,
+  "chapters": {
+    "Company overview": 3,
+    "The institutional problem": 4,
+    "Product architecture and scope": 5,
+    "The operating workflow": 6,
+    "Roles and responsibilities": 7,
+    "Information integrity and control": 8,
+    "Deployment and integration": 9,
+    "Document scope and reading guide": 10,
+    "Workspace": 11,
+    "Case management and evidence": 21,
+    "Investigative leads": 38,
+    "Financial alerts": 42,
+    "Watches and saved searches": 45,
+    "Network analysis": 50,
+    "Entity dossier": 58,
+    "Financial transaction tracing": 69,
+    "Relationship examination": 73,
+    "Geographic investigation": 76,
+    "Record exploration": 82,
+    "Data preparation and publication": 85,
+    "Identity-match review": 97,
+    "Face-search review": 100,
+    "Disaster-response operations": 105,
+    "Oversight and retention": 109,
+    "Product administration": 113
+  },
+  "screens": [
+    {
+      "page": 12,
+      "figure": 1,
+      "title": "Workspace overview",
+      "file": "01-overview.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "f833f8c20cd48bd1a3202cbadf390d95a742441802e002ed3d20fe2aa0d46efa",
+      "layout": "dense"
+    },
+    {
+      "page": 13,
+      "figure": 2,
+      "title": "Global record search",
+      "file": "01-search.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "b9dee38ed3bb912d1bce211fab7ccdc699d7baa459b9458ae7091abf82ef5013",
+      "layout": "standard"
+    },
+    {
+      "page": 14,
+      "figure": 3,
+      "title": "Search across scripts and spellings",
+      "file": "01-search-script.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "b047c22a52ab46177534c362cfa13d75c65e252ca7674b2339f5359abb46fef9",
+      "layout": "standard"
+    },
+    {
+      "page": 15,
+      "figure": 4,
+      "title": "Case creation",
+      "file": "01-open-case.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "b89df7cdeb58d849eefad5fe4c9905720c3ca0bf99a6dbef26ed9eb85a8c07f0",
+      "layout": "standard"
+    },
+    {
+      "page": 16,
+      "figure": 5,
+      "title": "Investigating officer’s work queue",
+      "file": "02-overview-crime.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "c3e40568553a92c5452190befa435b641eed25c8f2e3e14155e6ee112da74f6d",
+      "layout": "standard"
+    },
+    {
+      "page": 17,
+      "figure": 6,
+      "title": "Supervisory decisions",
+      "file": "02-overview-supervisor.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "e0fba0df178f2f12cd91e6d76aedd0d3a40905eda3076feecca2fbf693cbe354",
+      "layout": "standard"
+    },
+    {
+      "page": 18,
+      "figure": 7,
+      "title": "Workspace appearance",
+      "file": "01-dark-theme.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "9861fcba4001e6ac723e1824b823629ad04269bb6cf06bc55a75a6782fb475f2",
+      "layout": "standard"
+    },
+    {
+      "page": 19,
+      "figure": 8,
+      "title": "Identity and session controls",
+      "file": "01-account-menu.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "22deba2d188530691e08c13a10375d2e399c2ef3ae1a1a32c01be477727888b6",
+      "layout": "standard"
+    },
+    {
+      "page": 20,
+      "figure": 9,
+      "title": "Role-based access refusal",
+      "file": "01-role-refused.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "5e570c10dd7f6e39291b23b697f9f4a299a480f6ff35b2913912989a0b3d2f80",
+      "layout": "standard"
+    },
+    {
+      "page": 22,
+      "figure": 10,
+      "title": "Case board",
+      "file": "03-case-board.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "3be371f3a47780da8ba6121fb10c7cf2c95fd2c4a02cb0590ba11fd7cd61d166",
+      "layout": "dense"
+    },
+    {
+      "page": 23,
+      "figure": 11,
+      "title": "Case-priority explanation",
+      "file": "03-case-suspect-open.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "f2162e681903ba466448093d1fc366c83dfe684a44dfecf83efc6a70b42208a2",
+      "layout": "standard"
+    },
+    {
+      "page": 24,
+      "figure": 12,
+      "title": "Case lead progression",
+      "file": "03-case-leads-board.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "9576e8b3b21592116c843b8427db904794ef5334d6171b589c2fb82a396987ec",
+      "layout": "standard"
+    },
+    {
+      "page": 25,
+      "figure": 13,
+      "title": "Case alerts and chronology",
+      "file": "03-case-board-5.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "38b1b9296fd5a6ee8a844493fb4db054caaae4e6c6e851aa32c0cf5f12985681",
+      "layout": "standard"
+    },
+    {
+      "page": 26,
+      "figure": 14,
+      "title": "Case closure and legal holds",
+      "file": "03-case-close.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "d4fc97a325385d521d095493cd586b9c69b029d0b0e74e65c9d22f0c4721404a",
+      "layout": "standard"
+    },
+    {
+      "page": 27,
+      "figure": 15,
+      "title": "Case network",
+      "file": "03-case-network.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "009e864c370a31d8136e044f54d02cf22ed99d503411a574df3b7579705a4d61",
+      "layout": "standard"
+    },
+    {
+      "page": 28,
+      "figure": 16,
+      "title": "Exhibit registration",
+      "file": "03-case-evidence-form.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "a8bdde714d59c46547f4261e44df52297effe1e65589143254ff6a28f891583c",
+      "layout": "standard"
+    },
+    {
+      "page": 29,
+      "figure": 17,
+      "title": "Evidence locker and custody",
+      "file": "03-case-evidence.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "2279fc1fc56445f84e4108bc6b182bd81b5ba56e5c0e632cd692d52b3c8278db",
+      "layout": "standard"
+    },
+    {
+      "page": 30,
+      "figure": 18,
+      "title": "Evidence release and export",
+      "file": "03-case-evidence-exports.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "861e280ad3fbc6c3fcd54eb29d2e6b697a67b63f4ce572ae5fad929a29a65775",
+      "layout": "standard"
+    },
+    {
+      "page": 31,
+      "figure": 19,
+      "title": "Report templates",
+      "file": "03-case-reports-list.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "d5053973d85cd497a3bcbca9ec5aef7890f0b2701863e522e419f7cc0a51fc0e",
+      "layout": "standard"
+    },
+    {
+      "page": 32,
+      "figure": 20,
+      "title": "Structured report composition",
+      "file": "03-report-editor.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "adb504f743838380985a32c63795bb0aeb4d4de4084670d9422a5cecd7a6098e",
+      "layout": "standard"
+    },
+    {
+      "page": 33,
+      "figure": 21,
+      "title": "Report content selection",
+      "file": "03-report-editor-2.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "9d5c470134d50500619d5fe56181068e86eee85b3cd6ff3ea06c226932571b1e",
+      "layout": "standard"
+    },
+    {
+      "page": 34,
+      "figure": 22,
+      "title": "Draft management",
+      "file": "03-report-editor-3.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "0c76f81cf5cb386daab40f9ea7845be454d04532afcbdf7018f8fa30879505c4",
+      "layout": "standard"
+    },
+    {
+      "page": 35,
+      "figure": 23,
+      "title": "Recipient-specific report release",
+      "file": "03-report-export.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "b85abf74dd82ef4122c84195d06ec595ede555299c6e38c88b624974af41a95e",
+      "layout": "standard"
+    },
+    {
+      "page": 36,
+      "figure": 24,
+      "title": "Exported case report",
+      "file": "19-report-page-1.png",
+      "pixels": [
+        1310,
+        1853
+      ],
+      "sha256": "341c421fe542d1ab4f6c9f3741b8c8512b4c131a920e74e54435fbfbffc4e2b0",
+      "layout": "portrait"
+    },
+    {
+      "page": 37,
+      "figure": 25,
+      "title": "Draft evidence certificate",
+      "file": "19-certificate-page-1.png",
+      "pixels": [
+        1310,
+        1853
+      ],
+      "sha256": "a467d32395b7a83040c1c70fa34ed6d51a321f2069a6a1ba5294c806238490ec",
+      "layout": "portrait"
+    },
+    {
+      "page": 39,
+      "figure": 26,
+      "title": "Detector finding and evidence",
+      "file": "04-leads-ncb.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "38d902c526e612d7eef119a89d2c3b395ce4485574f69d0f981e7a3b2ea3b09e",
+      "layout": "dense"
+    },
+    {
+      "page": 40,
+      "figure": 27,
+      "title": "Case request and lead disposition",
+      "file": "04-leads-ncb-request.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "2788ff47427b3b1b26e27c5c5f7b4b2268be53940900ba373511cc29c7b180d1",
+      "layout": "standard"
+    },
+    {
+      "page": 41,
+      "figure": 28,
+      "title": "Approved lead in case context",
+      "file": "04-leads-syndicate.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "3f44742a70ce89344d7db089401ac3f5e1a0c5f44019f78ce28d7b2b900f0bcc",
+      "layout": "standard"
+    },
+    {
+      "page": 43,
+      "figure": 29,
+      "title": "Financial typology alerts",
+      "file": "05-alerts.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "893d895569015ef463c2e7a36ed79317e56eded8ef542bbcc8d2e1f9f5682d1b",
+      "layout": "standard"
+    },
+    {
+      "page": 44,
+      "figure": 30,
+      "title": "Transaction-path examination",
+      "file": "05-alerts-filtered.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "e8b6198599181d229438c1ecb28520daf204dfb88f7bb3a2214904872f7a2037",
+      "layout": "standard"
+    },
+    {
+      "page": 46,
+      "figure": 31,
+      "title": "Entity-watch activity",
+      "file": "06-watchlist.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "c400ed0785d40d44b577712cfab80c340ebda8b7108b4c196ecdd023cdd45725",
+      "layout": "standard"
+    },
+    {
+      "page": 47,
+      "figure": 32,
+      "title": "Geographic watch",
+      "file": "06-watchlist-area.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "e95043f6c565adbc6227d11921fce65ded6efa2735eee8d9506a604f29083926",
+      "layout": "standard"
+    },
+    {
+      "page": 48,
+      "figure": 33,
+      "title": "Watch configuration",
+      "file": "06-watch-dialog.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "04e3cb3e50d8a3b2d0e37ef0413b2678b4209c10c2a56d2c5095432d9bcd9e2a",
+      "layout": "standard"
+    },
+    {
+      "page": 49,
+      "figure": 34,
+      "title": "Saved-search review",
+      "file": "06-watchlist-search.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "4dbc95ef4210e942337303a05fca3adf20e60dc3ff0835bd5532e3183909fd1e",
+      "layout": "standard"
+    },
+    {
+      "page": 51,
+      "figure": 35,
+      "title": "Network workspace",
+      "file": "07-network.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "0c1bf4ada23312996f1f2ad98143e070eb22059ba4bdbdc2650a0186166ff7cd",
+      "layout": "dense"
+    },
+    {
+      "page": 52,
+      "figure": 36,
+      "title": "Network record list",
+      "file": "07-network-list.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "a82fa530c099673232fa808dbe348e7251d16cbdc200a9a0045cc23cddadae9e",
+      "layout": "standard"
+    },
+    {
+      "page": 53,
+      "figure": 37,
+      "title": "Layouts and relationship filters",
+      "file": "07-network-types.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "5210e6b0595b25e82e02f14878762cb6a66a1b562988025ca3fb50145a46215a",
+      "layout": "standard"
+    },
+    {
+      "page": 54,
+      "figure": 38,
+      "title": "Structural analysis",
+      "file": "07-network-analysis.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "cf32eb275941751d06de2dd052e0f2cf7caaf1ac985bdf25854f2db7de1decb2",
+      "layout": "standard"
+    },
+    {
+      "page": 55,
+      "figure": 39,
+      "title": "Communities and connectivity",
+      "file": "07-network-community.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "a57a0b40a8232ec1d9e038fd28462d054174571cea085f697e59f69fd0ac2cf3",
+      "layout": "standard"
+    },
+    {
+      "page": 56,
+      "figure": 40,
+      "title": "Financial-flow layout",
+      "file": "07-network-money.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "34b4d9501cfae37ff9e1e58403114df1997f76ca2fa7d14791c6c889c1768e43",
+      "layout": "standard"
+    },
+    {
+      "page": 57,
+      "figure": 41,
+      "title": "Record inspection and path analysis",
+      "file": "07-network-inspector.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "336f297567ab7122e881cea894c1e2ef2e8d034e38b9c69844c98e8889953de3",
+      "layout": "standard"
+    },
+    {
+      "page": 59,
+      "figure": 42,
+      "title": "Dossier overview",
+      "file": "08-dossier-overview.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "0ba46d7477e7c6fadce79d16edbe47aeb82866e9ed50d382812a5ea7e7635ac1",
+      "layout": "dense"
+    },
+    {
+      "page": 60,
+      "figure": 43,
+      "title": "Case assessment and actions",
+      "file": "08-dossier-overview-2.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "0ba46d7477e7c6fadce79d16edbe47aeb82866e9ed50d382812a5ea7e7635ac1",
+      "layout": "standard"
+    },
+    {
+      "page": 61,
+      "figure": 44,
+      "title": "Protected-field access",
+      "file": "08-dossier-unmask.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "20348c07c393514418d45c39277c096ca31ef1eef4b82b8230008585e2d010af",
+      "layout": "standard"
+    },
+    {
+      "page": 62,
+      "figure": 45,
+      "title": "Case history and pattern findings",
+      "file": "08-dossier-record.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "c913d9a0d5dd6c0d7624b2749ce65455fbeba49205621f45e5466cdedda769ea",
+      "layout": "standard"
+    },
+    {
+      "page": 63,
+      "figure": 46,
+      "title": "Accounts and transaction history",
+      "file": "08-dossier-financials.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "30e7fff5673919ef5bb688c5a0add2f043774fb2d6dd2f74f626fddf8908e8c3",
+      "layout": "standard"
+    },
+    {
+      "page": 64,
+      "figure": 47,
+      "title": "Entity relationship network",
+      "file": "08-dossier-network.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "f44696b73e32cadeade0b8b3f203cabce12cdf85056d7479e41395c540fa13b6",
+      "layout": "standard"
+    },
+    {
+      "page": 65,
+      "figure": 48,
+      "title": "Communication-record analysis",
+      "file": "08-dossier-comms.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "8550c92a1232a7e47e7b36b5d71e47acfefd5b9609d4020db8bfca4262125c0a",
+      "layout": "standard"
+    },
+    {
+      "page": 66,
+      "figure": 49,
+      "title": "Travel and asset records",
+      "file": "08-dossier-assets.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "24ed9c3aa033a59f5ca98d15197bc19c782575314c49275f846107eac07fa4c1",
+      "layout": "standard"
+    },
+    {
+      "page": 67,
+      "figure": 50,
+      "title": "Chronological record view",
+      "file": "08-dossier-timeline.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "8f19476457a361fac3672a51dd4a94e4a722bc34b360866bf616517bf0f397d0",
+      "layout": "standard"
+    },
+    {
+      "page": 68,
+      "figure": 51,
+      "title": "Source provenance",
+      "file": "08-dossier-sources.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "c64323adf4ff5370b64413473bcd738570a24569c82de059438c98481815f41a",
+      "layout": "standard"
+    },
+    {
+      "page": 70,
+      "figure": 52,
+      "title": "Outward financial trace",
+      "file": "09-money.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "4f2fe1bcff442da39cdec6e2c419625283ccfdfe5929e5973e50694968fcde89",
+      "layout": "dense"
+    },
+    {
+      "page": 71,
+      "figure": 53,
+      "title": "Inward financial trace",
+      "file": "09-money-in.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "d93b80081ca55ce5074e970234d77aab2b344a5079f8add2a2a8da760e7b8602",
+      "layout": "standard"
+    },
+    {
+      "page": 72,
+      "figure": 54,
+      "title": "Account-level financial trace",
+      "file": "09-money-accounts.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "e50813f539c0db93fb15a9ab9d0d13d70eb4eaf200a30e2627b903ef290456d1",
+      "layout": "standard"
+    },
+    {
+      "page": 74,
+      "figure": 55,
+      "title": "Relationship-enquiry setup",
+      "file": "10-connect-start.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "ba502836e1a84347ef4c9be6115ee0b34cd25c5e3b77a924fb1967f04c134572",
+      "layout": "standard"
+    },
+    {
+      "page": 75,
+      "figure": 56,
+      "title": "Connections between records",
+      "file": "10-connect.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "d88a557cadf8a9b09ec40f3a31da5ae1f1d9e5716a4c418df6a08656dec6c764",
+      "layout": "standard"
+    },
+    {
+      "page": 77,
+      "figure": 57,
+      "title": "Geographic overview",
+      "file": "11-globe.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "2ae2cf6fc2e9cb6edd4d82f6a0fce7d6fed3f694b3c68dcc007d343df5f9117f",
+      "layout": "dense"
+    },
+    {
+      "page": 78,
+      "figure": 58,
+      "title": "Local geographic examination",
+      "file": "11-globe-zoom.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "f4084e110a6ed44643c090d0d678a6c9ab4ee5bc3145243ee0d95929678ce2e6",
+      "layout": "standard"
+    },
+    {
+      "page": 79,
+      "figure": 59,
+      "title": "Area-search parameters",
+      "file": "11-area-panel.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "58486795ba2b8402d2f8cfde2cdbebe3fd3453813a7f0e1618974568f7c1d4d3",
+      "layout": "standard"
+    },
+    {
+      "page": 80,
+      "figure": 60,
+      "title": "Area observations",
+      "file": "11-area-results.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "f54b488f1947dfba1e0be98bbd85ab1c34dd6b6f7a11b512a11a0d36aed4dd8f",
+      "layout": "standard"
+    },
+    {
+      "page": 81,
+      "figure": 61,
+      "title": "Observation details and coverage",
+      "file": "11-area-results-2.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "4c6416a07e10b325d9750bc6f79bc393ddaf4fdf34e6ca0d0e33d892f002e092",
+      "layout": "standard"
+    },
+    {
+      "page": 83,
+      "figure": 62,
+      "title": "Incident overview and record access",
+      "file": "12-explore.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "6cea9d4a487462b25d36074f03df5bf672ab1312b462792550bcc36305e2f0c7",
+      "layout": "standard"
+    },
+    {
+      "page": 84,
+      "figure": 63,
+      "title": "Filtered record exploration",
+      "file": "12-explore-results.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "789b9281876a4797eb4e0dbc5da0e16821486679f2eb14df6c4d0c4340687e1f",
+      "layout": "standard"
+    },
+    {
+      "page": 86,
+      "figure": 64,
+      "title": "Extract profiling",
+      "file": "13-studio-columns.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "085989f0866d77e45f2c43e9ead521e1e103c116ada08dfa4f12ee1fdfa39b08",
+      "layout": "dense"
+    },
+    {
+      "page": 87,
+      "figure": 65,
+      "title": "Cleaning and quarantine",
+      "file": "13-studio-cleanup.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "98c5b424316e56bb4658a3298b07a088452e529b93dd94283c845b51bd55b7ce",
+      "layout": "standard"
+    },
+    {
+      "page": 88,
+      "figure": 66,
+      "title": "Field and relationship mapping",
+      "file": "13-studio-fields.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "300c8644ed9c0e1aace3e4a96ba8ee9afc2edd7684b173f39b18a2efbcde29dc",
+      "layout": "standard"
+    },
+    {
+      "page": 89,
+      "figure": 67,
+      "title": "Incoming-record matching",
+      "file": "13-studio-matching.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "724d8ba5ef930f0bfcc302f78cd92120d728ee7ec5376c8d39480f06523bb2d2",
+      "layout": "standard"
+    },
+    {
+      "page": 90,
+      "figure": 68,
+      "title": "Pre-publication checks",
+      "file": "13-studio-checks.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "ce4a1decc05cd08a4c022fdda5695d2138cf09add42f844518e7c9847c0e6422",
+      "layout": "standard"
+    },
+    {
+      "page": 91,
+      "figure": 69,
+      "title": "Proposed record changes",
+      "file": "13-studio-changes.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "6c73d52ee440e956f12ac9d46ff581e16184a5a9c3b0b785b6d8373ada6ad016",
+      "layout": "standard"
+    },
+    {
+      "page": 92,
+      "figure": 70,
+      "title": "Narrative tagging",
+      "file": "13-studio-tagging.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "cae98ef3973c103e4c4b93e3ef266a63292a25f02062e6d5b2f01ef3f2c602af",
+      "layout": "standard"
+    },
+    {
+      "page": 93,
+      "figure": 71,
+      "title": "Document-reference inspection",
+      "file": "13-studio-diary.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "f264ae0609b9a021e59270d21d140024585d24c81f5fd2a4866e2391e191832a",
+      "layout": "standard"
+    },
+    {
+      "page": 94,
+      "figure": 72,
+      "title": "Submission for review",
+      "file": "13-studio-proposed.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "ddd87726a4df16dd20fdf3d9426a4dbec018f2959006b77ec6bf1f715508bd71",
+      "layout": "standard"
+    },
+    {
+      "page": 95,
+      "figure": 73,
+      "title": "Publication decision",
+      "file": "13-studio-review.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "daf9f426d2134aea72c0b9d7b377678c06d7035d98f550b912e60a35da109ee5",
+      "layout": "standard"
+    },
+    {
+      "page": 96,
+      "figure": 74,
+      "title": "Published intake",
+      "file": "13-studio-published.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "499402ad41273f17c1b162ca53b221eec279029ec960857b85fc94f0af5416b9",
+      "layout": "standard"
+    },
+    {
+      "page": 98,
+      "figure": 75,
+      "title": "Identity-review queue",
+      "file": "14-review.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "6ee28af10ee92e57e2c637f2574825d94e7cb4d010a3d52c3ac5c7c78d9ca117",
+      "layout": "standard"
+    },
+    {
+      "page": 99,
+      "figure": 76,
+      "title": "Record-pair comparison",
+      "file": "14-review-pair.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "4f8192a8b0a4e79c815467b084ca7ebf6e62fa75b0d1ed53efc2b2e15aad8de7",
+      "layout": "standard"
+    },
+    {
+      "page": 101,
+      "figure": 77,
+      "title": "Probe-image registration",
+      "file": "15-faces-empty.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "661be3034c05400340fc7c095310cba78f2b18612ccfacac37d4f311051e90d8",
+      "layout": "standard"
+    },
+    {
+      "page": 102,
+      "figure": 78,
+      "title": "Face selection and search purpose",
+      "file": "15-faces-found.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "a5a6b27fe002e32f8b078308400d49c5357744a7753697bb708270df2acd4b13",
+      "layout": "standard"
+    },
+    {
+      "page": 103,
+      "figure": 79,
+      "title": "Candidate comparison",
+      "file": "15-faces-candidates.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "bba3b1078aa541239b1c8eb4a834a43054e78513fea5a10e33de6f0b8f4c02c2",
+      "layout": "standard"
+    },
+    {
+      "page": 104,
+      "figure": 80,
+      "title": "Independent candidate review",
+      "file": "15-faces-confirm.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "c7a1a74dd94c4f6ce90e312f8a93de9a05c8c586db726945a907afa097ca9e60",
+      "layout": "standard"
+    },
+    {
+      "page": 106,
+      "figure": 81,
+      "title": "Disaster-alert overview",
+      "file": "16-cop.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "33c699b0578bbdbb421b072c7a1d685ab6fd8ca7935e4f00aa1643a62ee76e9c",
+      "layout": "standard"
+    },
+    {
+      "page": 107,
+      "figure": 82,
+      "title": "Alert detail and affected area",
+      "file": "16-cop-flood.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "94346fcba4b029c380de0bebb371bcd988f59e6013be8ecfdaa922244a22a7f0",
+      "layout": "standard"
+    },
+    {
+      "page": 108,
+      "figure": 83,
+      "title": "Resource-dispatch record",
+      "file": "16-cop-dispatch.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "94346fcba4b029c380de0bebb371bcd988f59e6013be8ecfdaa922244a22a7f0",
+      "layout": "standard"
+    },
+    {
+      "page": 110,
+      "figure": 84,
+      "title": "Audit and oversight workspace",
+      "file": "17-oversight.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "a05e9658721935f4d78f8ef0d84daf9cc228b7cb8a376cd7b2f593db06569325",
+      "layout": "standard"
+    },
+    {
+      "page": 111,
+      "figure": 85,
+      "title": "Targeted audit examination",
+      "file": "17-oversight-filtered.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "84413cdf4c9d7bf46f4e99418e15d651768bf2eb413e747bb894ab8dfff3768b",
+      "layout": "standard"
+    },
+    {
+      "page": 112,
+      "figure": 86,
+      "title": "Transparency and retention",
+      "file": "17-transparency.png",
+      "pixels": [
+        2880,
+        1800
+      ],
+      "sha256": "488877b92ded8adcbbe704ebcc40b96911b33a5eb03b7b95086f444a486099a7",
+      "layout": "standard"
+    },
+    {
+      "page": 114,
+      "figure": 87,
+      "title": "Detector documentation",
+      "file": "18-admin-library.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "30217b09481bfdb9e631cd12eb11c87031c2fe3157b2e402b540695441d9cfc5",
+      "layout": "standard"
+    },
+    {
+      "page": 115,
+      "figure": 88,
+      "title": "Source-quality register",
+      "file": "18-admin-quality.png",
+      "pixels": [
+        1800,
+        1125
+      ],
+      "sha256": "1d0d094bb57e1999f56ab715ee0c807ac4db1e9ca72759d73dd5dd4973144521",
+      "layout": "standard"
+    }
+  ],
+  "broken": [],
+  "overflow": [],
+  "fontLoaded": true,
+  "one_image_per_screen": true,
+  "htmlScreens": 88
+}

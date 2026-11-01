@@ -1,0 +1,63 @@
+<cap:alert xmlns:cap="urn:oasis:names:tc:emergency:cap:1.2">
+<cap:identifier>IN-1791976061962016_16</cap:identifier>
+<cap:sender>Bihar-SDMA</cap:sender>
+<cap:sent>2026-10-14T16:55:11+05:30</cap:sent>
+<cap:status>Actual</cap:status>
+<cap:msgType>Update</cap:msgType>
+<cap:scope>Public</cap:scope>
+<cap:restriction/>
+<cap:addresses/>
+<cap:note/>
+<cap:references>IMD-Patna,IN-1791976061962016_59,2026-10-14T16:37:13+05:30</cap:references>
+<cap:incidents/>
+<cap:info>
+<cap:language>en-IN</cap:language>
+<cap:category>Met</cap:category>
+<cap:event>Thunderstorm with Lightning</cap:event>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:audience>1</cap:audience>
+<cap:effective>2026-10-14T16:34:00+05:30</cap:effective>
+<cap:onset>2026-10-14T16:55:11+05:30</cap:onset>
+<cap:expires>2026-10-14T19:34:00+05:30</cap:expires>
+<cap:headline>Thunderstorms with lightening/surface wind gusting (30-40 kmph) and light to moderate rain is likely to occur at isolated places over Kaimur (Bhabua), Rohtasin next 3 hours(04:25 PM TO 07:25PM).</cap:headline>
+<cap:description/>
+<cap:instruction>Please follow SDMA guidelines.</cap:instruction>
+<cap:contact/>
+<cap:parameter>
+<cap:valueName>Polygon URL</cap:valueName>
+<cap:value>https://sachet.ndma.gov.in/cap_public_website/FetchPolygonXMLFile?identifier=1791976061962016</cap:value>
+</cap:parameter>
+<cap:area>
+<cap:areaDesc>tslg</cap:areaDesc>
+<cap:altitude>0</cap:altitude>
+<cap:ceiling>0</cap:ceiling>
+</cap:area>
+</cap:info>
+<cap:info>
+<cap:language>HI</cap:language>
+<cap:category>Met</cap:category>
+<cap:event>Thunderstorm with Lightning</cap:event>
+<cap:urgency>Expected</cap:urgency>
+<cap:severity>Moderate</cap:severity>
+<cap:certainty>Possible</cap:certainty>
+<cap:audience>1</cap:audience>
+<cap:effective>2026-10-14T16:34:00+05:30</cap:effective>
+<cap:onset>2026-10-14T16:55:11+05:30</cap:onset>
+<cap:expires>2026-10-14T19:34:00+05:30</cap:expires>
+<cap:headline>अगले 3 घंटों (04:25 PM TO 07:25PM).  के दौरान आपके क्षेत्र के कुछ जगहों पर  मेघगर्जन/ वज्रपात और 30-40 किमी/घंटा की रफ्तार से हवा चलने एवं हल्की से मध्यम वर्षा होने की संभावना है।</cap:headline>
+<cap:description/>
+<cap:instruction>Please follow SDMA guidelines.</cap:instruction>
+<cap:contact/>
+<cap:parameter>
+<cap:valueName>Polygon URL</cap:valueName>
+<cap:value>https://sachet.ndma.gov.in/cap_public_website/FetchPolygonXMLFile?identifier=1791976061962016</cap:value>
+</cap:parameter>
+<cap:area>
+<cap:areaDesc>tslg</cap:areaDesc>
+<cap:altitude>0</cap:altitude>
+<cap:ceiling>0</cap:ceiling>
+</cap:area>
+</cap:info>
+</cap:alert>

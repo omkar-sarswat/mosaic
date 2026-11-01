@@ -1,0 +1,597 @@
+[
+  {
+    "kind": "screen",
+    "section": "01 · Workspace",
+    "title": "Everything for today’s work, on one screen.",
+    "image": "01-overview",
+    "intro": "Mosaic opens on the overview: what needs attention today, the case being worked, and every tool one click away. The layout is the same on every screen, so an officer learns it once and is at home everywhere.",
+    "text": "",
+    "items": [
+      "<b>Weirwood mark and product name.</b> One click returns to this overview from anywhere in Mosaic.",
+      "<b>Five sections:</b> Workspace, Investigation, Records, Operations and Governance. Only the screens your role uses are offered, so nobody wades through tools meant for someone else.",
+      "<b>Search, from anywhere (Ctrl + K).</b> A name in a supported script, a phone, PAN, account, vehicle, company or case number. Results open straight into the dossier.",
+      "<b>Tools of the section</b>, one click apart: here Overview, Cases, Leads, Alerts and Watchlist.",
+      "<b>The active case.</b> Personal-record access uses this case and its recorded purpose. Switch case or open a new one here; the whole workspace follows.",
+      "<b>Work queue.</b> New leads, activity on watched people, matches to review and decisions waiting, each with its status and time. Filter by kind, or type to find an item.",
+      "<b>The case at a glance:</b> purpose, officers, people of interest, evidence and legal basis, with quick links to the network, money trail and map.",
+      "<b>Handling strip.</b> Shows the highest security marking on screen, and reminds every user that each look-up is recorded."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "01 · Workspace",
+    "title": "Search in any spelling",
+    "image": "01-search",
+    "intro": "",
+    "text": "Typing <span class=\"term\">Shaikh</span> into the search bar returns every matching person, phone and asset that the active case is allowed to see, grouped by kind, with the district beside each name so two people with the same name are easy to tell apart. Results the case may not see are counted as withheld rather than silently dropped. Withheld counts distinguish restricted results from an empty search.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "01 · Workspace",
+    "title": "Search across Indian scripts",
+    "image": "01-search-script",
+    "intro": "",
+    "text": "Typed in Devanagari, <span class=\"term\">सालुंखे</span> still finds <span class=\"term\">Salunkhe</span>, <span class=\"term\">Salunke</span> and <span class=\"term\">Saalunkhe</span> written in English, and the same name in other Indian scripts. Mosaic compares names by how they sound across supported Indian scripts and English. It understands initials such as <span class=\"term\">N. R. Salunkhe</span>, honorifics such as <span class=\"term\">Shri</span> or <span class=\"term\">Mohd.</span>, and names written surname first, which is how they often appear in FIRs and bank records.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "01 · Workspace",
+    "title": "Open a case",
+    "image": "01-open-case",
+    "intro": "",
+    "text": "Work in Mosaic begins with a case. The officer gives it a title, chooses its purpose from the approved list, states the legal basis (FIR, ECIR, RC or court order and the provisions relied on) and, if there is one, the FIR number. Records matching that number join the case automatically. From that moment every search, view and export is recorded against the case and its purpose, which is what makes the work defensible later.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "01 · Workspace",
+    "title": "The investigating officer’s day",
+    "image": "02-overview-crime",
+    "intro": "",
+    "text": "A Crime Branch inspector starts the day here. The queue shows new activity on the suspects the case watches, sorted so the most important is on top (<span class=\"term\">7 to read first</span>). It also shows sightings inside a watched area around a gang’s meeting place, a stolen car read on the road after the theft, and fresh pattern leads from the data. Each line opens the record behind it in one click, and the case panel on the right keeps the people of the case in view.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "01 · Workspace",
+    "title": "The supervisor’s desk",
+    "image": "02-overview-supervisor",
+    "intro": "",
+    "text": "A Superintendent of Police sees <span class=\"term\">Needs your decision</span>: case requests from officers, record matches to confirm and approvals waiting, beside the people in the case and their FIRs. Approving or refusing happens right here with a reason, without leaving the case. The officer who asked sees the decision at once, so the request and its decision stay together in the workspace.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "01 · Workspace",
+    "title": "Workspace appearance and operating context",
+    "image": "01-light-theme",
+    "intro": "",
+    "text": "The light appearance shown here presents the dossier within the selected case. Appearance preferences affect the reading environment, while the acting identity and role determine the records and actions available. The account menu provides the identity reference and appearance control. Changing the presentation does not change case membership or access permissions.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "02 · Cases and evidence",
+    "title": "The whole investigation on one board.",
+    "image": "03-case-board",
+    "intro": "A case is the unit of work in Mosaic. Its purpose, legal basis, officers, records, evidence and reports live together, and the case board builds itself from the case records: there is nothing to assemble by hand.",
+    "text": "",
+    "items": [
+      "<b>Case title</b>, agency, status and purpose, with the legal basis (ECIR, FIR, STR) and the records that opened it.",
+      "<b>Four views:</b> Case board, Network, Evidence and exports, and Reports.",
+      "<b>Case figures at a glance:</b> records in the network, people, accounts, alerts, strong leads, money traced onward, sent abroad and withdrawn in cash.",
+      "<b>Suspects ranked by evidence.</b> Mosaic follows the money from the case records, then adds account holders, signatories, directors, call contacts, shared handsets, co-location and family.",
+      "<b>Each person’s role and key facts:</b> facilitator, mule, recruiter or kingpin, with facts such as <span class=\"term\">Rs 8.78 crore of large credits; 77% moved out within 72 hours</span>. A lead for the officer, never a finding.",
+      "<b>Where the money went</b> and where it came from, plus people this case shares with other cases.",
+      "<b>Close the case</b> with its outcome, such as a charge-sheet filed. Its data is then kept only until the retention date, unless a legal hold is placed."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "02 · Cases and evidence",
+    "title": "Open a rank to see why",
+    "image": "03-case-suspect-open",
+    "intro": "",
+    "text": "No one is ranked without a reason the officer can read. Opening a person on the board lists every fact behind their position, account by account and transfer by transfer: which account received the money, how fast it moved on, and to whom. From the same place the officer opens the full dossier, follows the money, opens the network, or turns the person into a lead on the case’s leads board.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "02 · Cases and evidence",
+    "title": "Leads board",
+    "image": "03-case-leads-board",
+    "intro": "",
+    "text": "Every line of enquiry has a card that moves across five columns: Lead, Investigating, Awaiting approval, Action authorised and Closed. Officers drag the cards as the work progresses, and the whole team sees the same board. Only a supervisor can move a lead into <span class=\"term\">Action authorised</span>, so authorising a lead is a separate, visible supervisory action.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "02 · Cases and evidence",
+    "title": "Alerts and timeline",
+    "image": "03-case-board-5",
+    "intro": "",
+    "text": "Lower on the board, the money-laundering alerts on the accounts in the case network, such as shell companies and round-tripping, each with its finding and amount. Beside them is the case timeline: transfers, trips abroad and filings in date order, each linked to its record. Together they answer the first questions every supervisor asks: what happened, and when.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "02 · Cases and evidence",
+    "title": "The case as one network",
+    "image": "03-case-network",
+    "intro": "",
+    "text": "Every record that belongs to the case, drawn as a single network of people, accounts, phones, companies and places, with the links between them. The same layouts, filters and analysis as the Network screen are available here, so the officer can move from the board to the picture of the whole case without losing context.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "02 · Cases and evidence",
+    "title": "Seal an exhibit",
+    "image": "03-case-evidence-form",
+    "intro": "",
+    "text": "Any file can be an exhibit: a bank statement, a phone extraction, CCTV footage, a scanned letter. On upload Mosaic computes the file’s SHA-256 fingerprint and stores it write-once, so later verification can detect a change to the stored bytes. It records the device (make, model, serial number, IMEI or MAC), who seized or produced it, and the legal order it came under.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "02 · Cases and evidence",
+    "title": "Custody and court exports",
+    "image": "03-case-evidence-exports",
+    "intro": "",
+    "text": "Each exhibit keeps its own chain of custody: every later view, download or verification is added to it, and the fingerprint can be re-checked at any time. One click exports the case report or a complete court evidence pack, addressed to a named recipient at their clearance, with every page watermarked.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "02 · Cases and evidence",
+    "title": "Three report types",
+    "image": "03-case-reports-list",
+    "intro": "",
+    "text": "Mosaic drafts the documents an investigation must produce: the <b>case diary</b> required under BNSS s.192, the <b>charge-sheet annexure</b> with the accused’s profile under BNSS s.193, and an <b>intelligence summary</b> for supervisors and partner agencies. Each starts already filled with the case’s people and the sections the document needs. The officer writes the judgement; Mosaic supplies the facts.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "02 · Cases and evidence",
+    "title": "Write once, the facts stay live",
+    "image": "03-report-editor",
+    "intro": "",
+    "text": "The officer writes the narrative and inserts facts from the panel on the right: records in the case, sealed exhibits, pattern leads, area searches and the links between records. Inserted facts are not copied text. They refresh from the records every time the draft is opened, so the officer can review the current source-backed facts before exporting, and every fact prints with its source.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "02 · Cases and evidence",
+    "title": "Export for a named reader",
+    "image": "03-report-export",
+    "intro": "",
+    "text": "Every copy is made for someone. The officer names the recipient, for example a Special Court, and their clearance. The exported copy is fixed, fingerprinted and logged, and anything above the reader’s clearance is left out automatically. The watermark records the exporting officer, time and intended recipient.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "02 · Cases and evidence",
+    "title": "The case report",
+    "image": "19-report-page-1",
+    "intro": "",
+    "text": "A clean, printable account of the case: persons of interest ranked by evidence with the facts behind each rank, the money trail with its end points, the typology alerts and a profile of every person, including names in their original script. Every page carries its security marking. Its footer names the export, the officer, the time and the recipient, so its export context stays visible.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "02 · Cases and evidence",
+    "title": "Draft certificate under BSA s.63(4)",
+    "image": "19-certificate-page-1",
+    "intro": "",
+    "text": "The evidence-pack workflow includes a draft certificate labelled BSA s.63(4). Mosaic prefills Part A and Part B with the exhibit, the device, the legal order and the SHA-256 and MD5 hashes, for the responsible officer and expert to review, complete and sign where applicable. It goes into the court evidence pack with the report, the exhibits, their custody chains and a fingerprinted manifest.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "03 · Leads",
+    "title": "Patterns found in the data, with the evidence behind them.",
+    "image": "04-leads-ncb",
+    "intro": "Mosaic’s pattern engine watches the records with 19 detectors written around Indian law and crime typologies. When a pattern forms, it raises a lead for the agency whose mission it belongs to. A lead is where an officer starts checking; it is never a verdict.",
+    "text": "",
+    "items": [
+      "<b>Mission tracks.</b> An NCB officer sees narcotics, precursors and couriers. Every agency sees only its own tracks.",
+      "<b>Patterns.</b> Filter by detector: handset-sharing crew, foreign handler, precursor diversion, successor SIM, convoy.",
+      "<b>The lead list</b>, with severity, pattern, tracks and when the pattern was last seen.",
+      "<b>Pseudonymous until a case opens.</b> Parties are Subject A, Subject B and so on. Names appear only to members of a case opened on the lead.",
+      "<b>Evidence behind it:</b> the numbers, contacts, dates and reasoning. <span class=\"term\">Subject C’s number first appeared 26 days after Subject B’s went silent, and calls 7 of its 9 regular contacts.</span>",
+      "<b>How this pattern works:</b> the detector in plain words, what it deliberately ignores, and the innocent explanations to rule out."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "03 · Leads",
+    "title": "Ask for a case, or dismiss with a reason",
+    "image": "04-leads-ncb-request",
+    "intro": "",
+    "text": "When a lead is worth pursuing, the officer asks for a case on it: the purpose, a title and the legal basis, meaning the FIR or order and the provisions relied on. A supervisor of the same agency, and not the person asking, must approve before any party enters a case and their name is revealed. A lead that does not hold up is dismissed with a reason, which is kept as the reviewer’s decision so the same pattern is not chased twice. Either way, a person decides and the record shows who.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "03 · Leads",
+    "title": "After the case opens",
+    "image": "04-leads-syndicate",
+    "intro": "",
+    "text": "Inside the Crime Branch’s organised-crime case, the leads now show names to the case’s members. A new SIM began calling a suspect’s contacts after his number went silent. One number plate was read in two places no car could connect in time. Two vehicles keep travelling the same route as a convoy. Several people deposit cash just under the reporting limit. A public servant’s household holds assets far above its known income. Each lead links straight to the dossiers of the people involved.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "04 · Alerts",
+    "title": "Sixteen typologies watched",
+    "image": "05-alerts",
+    "intro": "",
+    "text": "Mosaic watches the accounts in every case for the known shapes of laundering: fraud proceeds, mule pass-through, shell companies, high-risk remittances, income mismatch, rapid layering, diverted loans, crypto off-ramps, round-tripping, cash-outs below the s.269ST limit, structuring below the PAN limit, hawala and more.",
+    "items": [
+      "<b>Typologies</b>, with the number of alerts in the case.",
+      "<b>Score</b>, showing which alert to read first.",
+      "<b>Subject and finding</b> in plain words, with the amount.",
+      "<b>Next steps:</b> open the dossier, trace the funds or see the network."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "04 · Alerts",
+    "title": "Round-tripping, shown step by step",
+    "image": "05-alerts-filtered",
+    "intro": "",
+    "text": "Choosing one typology lists every account where it fired. Here three companies passed at least ₹6.60 crore around a closed cycle and back to where it started, a classic way of making money look like genuine business. The finding spells out the exact path, account by account, so the officer does not have to reconstruct it from statements. One click traces the funds onward, and another opens the network of the companies and the people who control them.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "05 · Watchlist",
+    "title": "What the case is following",
+    "image": "06-watchlist",
+    "intro": "",
+    "text": "",
+    "items": [
+      "<b>People and records</b> the case follows, with how much is new on each.",
+      "<b>What to read first:</b> read first, worth a look, routine or everything.",
+      "<b>Kinds of activity:</b> calls, FIRs, leads and sightings.",
+      "<b>Mark reviewed</b> once read, so the team knows it was seen.",
+      "<b>Stop watching</b>, with a reason kept for the record."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "05 · Watchlist",
+    "title": "Watch a place",
+    "image": "06-watchlist-area",
+    "intro": "",
+    "text": "A watch can be a place as well as a person. Here the case watches a 2 km circle around a gang’s meeting place. Newly ingested number-plate reads and call records inside the watched circle can appear here when they are visible to the case. People already named in an FIR are flagged first, so the officer sees at once when a known accused returns to the area.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "05 · Watchlist",
+    "title": "Start a watch with a reason",
+    "image": "06-watch-dialog",
+    "intro": "",
+    "text": "Watching someone is a serious step, so it needs a reason. The reason is recorded and shown to the whole case team. The officer chooses whether to include the last 30 or 90 days or to start from now. Searches saved in the Explorer work the same way: they run again on their own, and any new result reaches the work queue.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "06 · Network",
+    "title": "See how people, accounts, phones and companies connect.",
+    "image": "07-network",
+    "intro": "The network shows the case as people and things joined by what links them: money, calls, shared handsets, directorships, addresses and family. Recorded links are drawn solid; links a machine suggests are drawn differently, so the two are never confused.",
+    "text": "",
+    "items": [
+      "<b>Layouts:</b> structure, money flow, by record type, by community, neighbourhood around one record, or free-form.",
+      "<b>Analyze</b> finds the groups, the go-betweens, the weak points and the loops in the network.",
+      "<b>Relationship layers:</b> money and accounts, calls and devices, or property, vehicles and companies.",
+      "<b>Record inspector:</b> details, evidence and related records for whatever is selected.",
+      "<b>Simple controls:</b> click to select, Shift-click to pick several, double-click to expand, right-click for the dossier.",
+      "Exploring the graph never widens anyone’s permissions. Reaching beyond the case needs a supervisor’s approval."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "06 · Network",
+    "title": "Network structure",
+    "image": "07-network-analysis",
+    "intro": "",
+    "text": "One click on Analyze answers the questions investigators ask of every network. Which groups are more tied to each other than to anyone else? Who are the go-betweens linking otherwise separate people, such as an accountant or a shared account? Which single record, if removed, would split the network apart? Which directed links form loops? Each answer is a starting point for questions, never proof of guilt.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "06 · Network",
+    "title": "Money flow layout",
+    "image": "07-network-money",
+    "intro": "",
+    "text": "Switching the layout to money flow arranges the accounts in layers from left to right, in the direction the money actually moved. The width of each lane is in proportion to the amount, so the large movements stand out at once. This layout helps the analyst compare the transfer routes without reconstructing them from separate statements.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "06 · Network",
+    "title": "Select, inspect, find a path",
+    "image": "07-network-inspector",
+    "intro": "",
+    "text": "Selecting a person brings up their identity documents, money in and out, and the evidence linking them to the rest. From the selection bar the officer can inspect, expand the neighbourhood, hide, or find the path between two records. That can be the shortest path, three alternative routes, the path that follows the money, or the most money that could have moved between them.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "07 · Dossier",
+    "title": "Everything known about one person, on one page.",
+    "image": "08-dossier-overview",
+    "intro": "The dossier gathers every record that describes a person, from every source the case may read, after Mosaic has recognised that they are the same person. Eight tabs go deeper: Overview, Record and patterns, Financials, Network, Communications, Travel and assets, Timeline and Sources.",
+    "text": "",
+    "items": [
+      "<b>Photograph on record</b>, with its source (here a professional-body record).",
+      "<b>Identity:</b> the name in English and its original script, date of birth, father, occupation, declared income and address.",
+      "<b>What stands out:</b> the role and rank in the case, typology alerts, conduct flags, businesses run and travel abroad.",
+      "<b>Next steps:</b> network, connections, follow the money, show on map, watch, add as a lead.",
+      "<b>Identity documents</b> from each issuing system, with format checks: a valid PAN, holder an individual, surname initial matching.",
+      "<b>Masked by policy.</b> Aadhaar shows only its last digits. Unmasking needs a written reason, which is recorded.",
+      "<b>Figures:</b> accounts, money in, money out, phones, associates, cases, alerts and trips."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "07 · Dossier",
+    "title": "Record and patterns",
+    "image": "08-dossier-record",
+    "intro": "",
+    "text": "Everything the police record holds about the person, in one place. At the top are the pattern findings that involve them, each with its evidence. Below is the criminal background: every FIR in which they appear, their role, the sections of law and the status, and the history-sheet if one exists. Then their regular contacts and the towers they use, and any weapons linked to them by serial number or ballistic signature.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "07 · Dossier",
+    "title": "Financials",
+    "image": "08-dossier-financials",
+    "intro": "",
+    "text": "Every account the person holds, with money in and out month by month on a single chart, and every transaction listed with its channel (RTGS, NEFT, UPI, cash), the narration and the counterparty. Transfers that touch flagged accounts are marked. One click on <span class=\"term\">Trace onward</span> opens the money trail from this person, without re-entering anything.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "07 · Dossier",
+    "title": "Communications",
+    "image": "08-dossier-comms",
+    "intro": "",
+    "text": "Who the person really talks to. Top contacts are listed with the number of calls, the minutes, the first and last call and the subscriber behind each number. A chart of calls by hour of the day shows their routine, and the changes in it, which often mark the days that matter to a case.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "07 · Dossier",
+    "title": "Travel and assets",
+    "image": "08-dossier-assets",
+    "intro": "",
+    "text": "Every journey with its route, date and booking reference, which shows patterns such as repeated short trips to a financial hub. Beside it are the vehicles, property, licensed firearms and crypto wallets held by the person and their family. Together they show what someone owns against what they declare they earn.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "07 · Dossier",
+    "title": "Timeline",
+    "image": "08-dossier-timeline",
+    "intro": "",
+    "text": "Every dated event about the person in one stream, newest first: transfers, calls, trips, FIRs and filings. Each entry is linked to the record it came from. Reading a life in order is often how an investigator spots the moment everything changed.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "07 · Dossier",
+    "title": "Sources",
+    "image": "08-dossier-sources",
+    "intro": "",
+    "text": "Where every single fact came from: the source system, the record, when it arrived and how sure the match is. Below are the separate source records that Mosaic recognised as this one person. Nothing is merged without a trace, and any link can be undone. This gives reviewers a route from the dossier back to the supporting records.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "08 · Money trail",
+    "title": "Follow the money",
+    "image": "09-money",
+    "intro": "",
+    "text": "Start from any person, company or account, and Mosaic follows the transfers hop by hop, to the end of the trail or back to its sources.",
+    "items": [
+      "<b>Direction:</b> where the money went, or where it came from.",
+      "<b>Hops and threshold:</b> how far to follow, and which small transfers to ignore.",
+      "<b>By party or by account:</b> combine a person’s accounts, or keep each one apart.",
+      "<b>The flow, hop by hop:</b> bars are people or accounts, lanes are transfers sized by amount.",
+      "<b>End points:</b> how much ended abroad, in cash or at retail.",
+      "<b>Recipients</b> ranked by the value traced to them, with their flags."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "09 · Connections",
+    "title": "Connections between two people",
+    "image": "10-connect",
+    "intro": "",
+    "text": "Pick any two people and ask how they are connected. Mosaic draws the network between them and spells out the chain of records that joins them, here <span class=\"term\">signatory of</span>, <span class=\"term\">sent money to</span>, <span class=\"term\">held by</span>, in three steps. It lists conduct flags, such as being the director or signatory of a flagged company, or making repeated short trips to financial hubs. It also shows associates inferred from shared devices, accounts, calls, addresses and travel. Each comes with the evidence it rests on, so the officer can judge it, not just accept it.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "10 · Map",
+    "title": "The case on a map",
+    "image": "11-globe",
+    "intro": "",
+    "text": "Every person, company and event in the case placed where it belongs, from a street in Pune to a free zone abroad.",
+    "items": [
+      "<b>Case overview</b> or <b>search an area</b>.",
+      "<b>Scope:</b> the active case, or everything flagged.",
+      "<b>Layers:</b> money flows, relationships, travel, people and companies, agency cases.",
+      "<b>Cross-border flows</b>, with the amounts.",
+      "<b>Key:</b> machine-inferred links are drawn differently from recorded ones.",
+      "<b>Selection:</b> pick a person or company to bring their money and relationships forward."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "10 · Map",
+    "title": "Search an area",
+    "image": "11-area-results",
+    "intro": "",
+    "text": "Who was near the scene? Choose a toll plaza, camera or phone tower, or click a point on the map. Set a radius and a period, and write the reason, which is recorded with the case. Mosaic lists every vehicle read at a toll plaza or camera inside the circle, every phone that used a tower there, and every traveller booked from or to it, with people already in an FIR flagged first. Residents registered in the area are shown separately, because living there does not place someone at the scene. The area can then be watched, so new presence reaches the work queue.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "11 · Explorer",
+    "title": "Explorer",
+    "image": "12-explore-results",
+    "intro": "",
+    "text": "The Explorer is for searching and browsing every kind of record at once, in any script, within what the case may see. Each result shows its security marking. Choosing one shows its properties, the source of every value and its links, and it can be added to the case with a recorded reason. A useful search can be saved so that it keeps running and reports new results. Police roles also see aggregate crime figures by month, district, section of law and kind of offence; clicking any bar filters the rest.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "12 · Data studio",
+    "title": "Data studio",
+    "image": "13-studio-columns",
+    "intro": "",
+    "text": "New material, such as a bank’s reply to a notice, is prepared here before anything reaches the records.",
+    "items": [
+      "<b>Source extracts</b> the case may use, each obtained under a notice or order.",
+      "<b>What happens to the rows:</b> received, typed, cleaned, held back, de-duplicated, matched and proposed.",
+      "<b>Six steps:</b> columns, clean-up, fields, matching, checks and changes.",
+      "<b>Every column read from its values</b>, not its header, with the formats seen.",
+      "<b>The proposal:</b> what publishing would do, and under which order.",
+      "<b>Proposals in my cases</b>, waiting for or approved by a second officer."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "12 · Data studio",
+    "title": "Clean-up",
+    "image": "13-studio-cleanup",
+    "intro": "",
+    "text": "Real extracts are messy: placeholder values such as <span class=\"term\">NA</span> or <span class=\"term\">0000</span>, names in capitals, phone numbers with and without +91, dates in five formats. Mosaic suggests clean-up steps for every column, and the officer can accept, change or add to them. Steps run in order, the source rows are never touched, and every changed cell is listed. Aadhaar numbers are masked on clean-up and never stored in full.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "12 · Data studio",
+    "title": "Fields",
+    "image": "13-studio-fields",
+    "intro": "",
+    "text": "Each column is mapped to the field it really holds. A dataset becomes a type of record, a row becomes a record, a column becomes a property, and a column that points to something else, such as an account holder’s name, becomes a link. Mosaic proposes the mapping itself, and the officer can correct it in a click.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "12 · Data studio",
+    "title": "Matching",
+    "image": "13-studio-matching",
+    "intro": "",
+    "text": "Every row is compared with the people and accounts already on record and labelled <span class=\"term\">on record</span>, <span class=\"term\">probable</span> or <span class=\"term\">new</span>. The basis is shown, such as the same account number, the same PAN or the same mobile number, so a reviewer can see why two records were tied together before anything is published.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "12 · Data studio",
+    "title": "Checks",
+    "image": "13-studio-checks",
+    "intro": "",
+    "text": "Before publishing, Mosaic points out what deserves a second look, with an innocent explanation for each, such as <span class=\"term\">one person, three accounts in this extract</span> or <span class=\"term\">four values disagree with the record</span>. It shows the links the extract would add and maps where its rows sit. Existing values are never overwritten: a new value fills a gap, confirms what is on record, or is kept as a conflict for a person to settle.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "12 · Data studio",
+    "title": "Tagging free text",
+    "image": "13-studio-tagging",
+    "intro": "",
+    "text": "Seized diaries, letters and notes are read too. Account numbers, phone numbers, vehicle registrations, amounts, dates and places are tagged in the text and linked to the records they match. A name written on a page is tied to a person only when an identifier on the same page is on record for someone of that name. This avoids the classic mistake of linking the wrong person who happens to share a name.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "12 · Data studio",
+    "title": "A second officer approves",
+    "image": "13-studio-published",
+    "intro": "",
+    "text": "Nothing is published on one person’s say-so. A supervisor of the case, who is not the proposer, reviews what the publication would do, writes a reason and approves. The changes go live with the legal order attached and can be reverted card by card if a mistake is found. The pattern engine can then run again over the new records.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "13 · Review matches",
+    "title": "Review matches",
+    "image": "14-review",
+    "intro": "",
+    "text": "When Mosaic is not sure whether two records describe the same person, it asks a person. Nothing is merged until someone decides, and every decision can be undone.",
+    "items": [
+      "<b>Side by side:</b> original script, father or spouse, birth year, gender and district.",
+      "<b>Why they were paired</b>, in plain words.",
+      "<b>What agrees</b>, and how strongly it counts.",
+      "<b>What differs.</b> Common names count for less than rare ones.",
+      "<b>Decide:</b> same person or different people, with a recorded reason."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "14 · Face search",
+    "title": "Face search, bound to the case",
+    "image": "15-faces-candidates",
+    "intro": "",
+    "text": "A camera still is first sealed as case evidence under its legal order, before any face is read from it. The officer then chooses one face in the still and gives a reason for the search. Mosaic compares it with the photographs the case may see and returns candidates with their similarity and the source of each photograph, such as a bank’s KYC photo or an arrest record. These are candidates, not identifications. A match counts only when another officer of the case confirms it with a reason, and the searching officer can never confirm their own search.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "15 · Disaster map",
+    "title": "Disaster alerts on the map",
+    "image": "16-cop",
+    "intro": "",
+    "text": "In a disaster, the control room needs one picture. Official NDMA SACHET alerts for floods, cyclones, heavy rain and thunderstorms appear after the alert feed is ingested, on a map with district boundaries and hospitals. Each alert shows how it was placed: by official district code, by the polygon in the alert, by district name or by river gauge. Alerts that could not be placed are listed, not lost.",
+    "items": []
+  },
+  {
+    "kind": "screen",
+    "section": "15 · Disaster map",
+    "title": "From one flood alert to action",
+    "image": "16-cop-flood",
+    "intro": "",
+    "text": "",
+    "items": [
+      "<b>The alert</b> in the list, with its sender and status.",
+      "<b>Details:</b> sender, effective and expiry times, and the area named.",
+      "<b>River gauge:</b> the level against its warning and danger marks.",
+      "<b>Affected districts</b>, by official code.",
+      "<b>Hospitals in the area</b>, for casualty planning.",
+      "<b>Dispatch resources</b> such as relief kits, with a dispatch log."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "16 · Oversight",
+    "title": "Oversight",
+    "image": "17-oversight",
+    "intro": "",
+    "text": "The oversight officer is independent of every investigation and sees the trail, never the case data.",
+    "items": [
+      "<b>Audit chain intact</b>, with the number of entries and the latest fingerprint.",
+      "<b>Seal today’s root hash</b>, to publish outside Mosaic so a later rewrite can be checked against an independent copy.",
+      "<b>Filter by officer or by person:</b> who looked at this person, and why?",
+      "<b>Every event:</b> time, officer, action, case and purpose, records and outcome.",
+      "<b>Insider-threat alerts</b>, such as bulk look-ups of personal records.",
+      "<b>Public transparency report:</b> aggregate figures anyone can read."
+    ]
+  },
+  {
+    "kind": "screen",
+    "section": "17 · Administration",
+    "title": "Administration",
+    "image": "18-admin-library",
+    "intro": "",
+    "text": "Every detector is documented for the administrator: the question it answers, how it works, which records it reads, the agencies it serves, and how it stays effective against an adversary who knows it exists. The library covers burner SIM switches, cloned plates, organised-crime syndicates, convoys, dense money blocks, disproportionate assets, dormant accounts woken together, handset sharing, hawala points, shell companies, SIM-box gateways, smurfing, stolen vehicles still moving, bid-rigging, victim money convergence, weapons linking crimes, foreign handlers, precursor diversion and repeated reconnaissance. A source-quality register lists problems to report back to each data owner.",
+    "items": []
+  }
+]

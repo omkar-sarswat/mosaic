@@ -1,0 +1,503 @@
+# DRISHTI core ontology v0.2
+#
+# The ontology is the product: every app, API call and policy decision reads it.
+# Object types and link types are declared here as code, versioned, and published
+# so any department can extend them without forking the platform.
+#
+# Conventions
+#   sensitivity : PUBLIC | RESTRICTED | CONFIDENTIAL | SECRET  (drives Guard)
+#   personal    : true => personal data under the DPDP Act; needs an open case to read
+#   mask        : aadhaar | phone | account | pan  (how the value is masked)
+#   mask_below  : mask only for users whose clearance is below this level; without it the
+#                 field is always masked until an audited unmask (Aadhaar: UIDAI rule)
+#   search      : name | id | text  (how the property is indexed)
+#   evidentiary : on links; false => the far end is shown as a count, not an identity,
+#                 unless it is already inside the case scope (BVerfG 2023 "innocent contacts")
+#
+# High-volume events (bank transactions, call records, travel, toll hits) are not objects:
+# they live in event tables and surface in the graph as aggregated links
+# (transferred_to, called) - the design doc's "heavy rows in tables, derived links in the graph".
+
+version: 0.4.0
+
+sensitivity_levels:
+  PUBLIC: 0
+  RESTRICTED: 1
+  CONFIDENTIAL: 2
+  SECRET: 3
+
+object_types:
+  Document:
+    sensitivity: CONFIDENTIAL
+    title: title
+    properties:
+      title: {type: string, required: true, search: text}
+      content: {type: string, required: true, search: text}
+      reference: {type: string, search: id}
+      agency: {type: string, search: text}
+      authored_at: {type: datetime}
+      sha256: {type: string, search: id}
+      category: {type: string, search: text}
+  Event:
+    sensitivity: RESTRICTED
+    title: title
+    properties:
+      title: {type: string, required: true, search: text}
+      kind: {type: string, required: true, search: text}
+      occurred_at: {type: datetime, required: true}
+      ended_at: {type: datetime}
+      summary: {type: string, search: text}
+      agency: {type: string, search: text}
+      location: {type: string, search: text}
+      accuracy_m: {type: number}
+  Shipment:
+    sensitivity: RESTRICTED
+    title: reference
+    properties:
+      reference: {type: string, required: true, search: id}
+      description: {type: string, search: text}
+      origin: {type: string, search: text}
+      destination: {type: string, search: text}
+      status: {type: string, search: text}
+  DigitalArtifact:
+    sensitivity: CONFIDENTIAL
+    title: value
+    properties:
+      value: {type: string, required: true, search: id}
+      kind: {type: string, required: true, search: text}
+      description: {type: string, search: text}
+      first_seen: {type: datetime}
+      platform: {type: string, search: text}
+      exhibit_sha256: {type: string, search: id, pattern: "^[0-9a-f]{64}$"}
+      legal_order: {type: string, search: id}
+      sealed_at: {type: datetime}
+    # Social-media handles and posts exist only as sealed exhibits obtained under a legal order,
+    # never bulk-scraped. The store refuses them without the exhibit hash and the order.
+    requires_when:
+      - {when: {kind: [social_handle, social_post]}, require: [exhibit_sha256, legal_order]}
+  Person:
+    sensitivity: RESTRICTED
+    personal: true
+    title: name
+    retention: case_bound
+    properties:
+      name: {type: string, required: true, search: name}
+      name_native: {type: string, search: name}
+      aliases: {type: list, search: name}
+      father_name: {type: string, search: name}
+      gender: {type: enum, values: [M, F, X, U]}
+      dob: {type: date}
+      age: {type: integer}
+      birth_year: {type: integer}
+      aadhaar: {type: string, mask: aadhaar, search: id, pattern: "^[2-9][0-9]{11}$"}
+      pan: {type: string, mask: pan, mask_below: 2, search: id, pattern: "^[A-Z]{3}[PCHFATBLJG][A-Z][0-9]{4}[A-Z]$"}
+      passport_no: {type: string, search: id, pattern: "^[A-Z][0-9]{7}$"}
+      dl_no: {type: string, search: id}
+      voter_id: {type: string, search: id}
+      email: {type: string, search: id}
+      occupation: {type: string, search: text}
+      declared_income: {type: number}
+      address: {type: string, search: text}
+      city: {type: string, search: text}
+      district_lgd: {type: string}
+      nationality: {type: string}
+      watchlist: {type: string, search: text}
+      history_sheet_no: {type: string, search: id}
+
+  Organisation:
+    sensitivity: RESTRICTED
+    title: name
+    properties:
+      name: {type: string, required: true, search: name}
+      kind: {type: enum, values: [company, shell_company, foreign_company, trust, police_station, scrapyard, bank, merchant, crypto_exchange, hawala_operator, department, pharma, chemical_dealer, explosives_dealer, transport, call_centre, other]}
+      licence_no: {type: string, search: id}
+      licensed_for: {type: list, search: text}
+      cin: {type: string, search: id}
+      gstin: {type: string, search: id}
+      pan: {type: string, search: id}
+      registration_no: {type: string, search: id}
+      incorporated_on: {type: date}
+      registered_address: {type: string, search: text}
+      paid_up_capital: {type: number}
+      gst_turnover: {type: number}
+      country: {type: string}
+      city: {type: string, search: text}
+      district_lgd: {type: string}
+      # constitution (proprietorship, partnership, private limited, LLP), line of business, head-count
+      constitution: {type: string}
+      sector: {type: string, search: text}
+      employees: {type: integer}
+
+  Location:
+    sensitivity: PUBLIC
+    title: label
+    properties:
+      label: {type: string, required: true, search: text}
+      address: {type: string, search: text}
+      city: {type: string, search: text}
+      pin: {type: string, pattern: "^[1-9][0-9]{5}$"}
+      country: {type: string}
+      district_lgd: {type: string}
+
+  AdminUnit:
+    sensitivity: PUBLIC
+    title: name
+    properties:
+      name: {type: string, required: true, search: name}
+      level: {type: enum, values: [state, district, subdistrict, village, ward]}
+      lgd_code: {type: string, required: true, search: id}
+      state_lgd_code: {type: string}
+
+  Vehicle:
+    sensitivity: RESTRICTED
+    personal: true
+    title: registration_no
+    properties:
+      # State series (MH12AB1234) or Bharat series (22BH1234AA).
+      registration_no: {type: string, required: true, search: id, pattern: "^([A-Z]{2}[0-9]{1,2}[A-Z]{0,3}[0-9]{4}|[0-9]{2}BH[0-9]{4}[A-HJ-NP-Z]{1,2})$"}
+      make: {type: string, search: text}
+      colour: {type: string}
+      value: {type: number}
+      chassis_no: {type: string, search: id}
+      engine_no: {type: string, search: id}
+      status: {type: enum, values: [registered, stolen, recovered, scrapped]}
+      vehicle_class: {type: string}
+      fuel: {type: string}
+      year: {type: integer}
+      rto: {type: string}
+
+  Phone:
+    sensitivity: RESTRICTED
+    personal: true
+    title: number
+    properties:
+      number: {type: string, required: true, search: id, mask: phone, mask_below: 2, pattern: "^[6-9][0-9]{9}$|^\\+[1-9][0-9]{7,14}$"}
+      operator: {type: string}
+      circle: {type: string}
+      subscriber_name: {type: string, search: name}
+
+  Device:
+    sensitivity: RESTRICTED
+    personal: true
+    title: imei
+    properties:
+      imei: {type: string, required: true, search: id, mask: account, mask_below: 2}
+      model: {type: string, search: text}
+      make: {type: string}
+      kind: {type: string}
+
+  BankAccount:
+    sensitivity: CONFIDENTIAL
+    personal: true
+    title: account_no
+    properties:
+      account_no: {type: string, required: true, search: id, mask: account, mask_below: 2}
+      ifsc: {type: string, pattern: "^[A-Z]{4}0[A-Z0-9]{6}$"}
+      bank: {type: string, search: text}
+      branch: {type: string}
+      account_type: {type: enum, values: [savings, current, nre, loan, wallet]}
+      opened_on: {type: date}
+      vpa: {type: string, search: id}
+      kyc: {type: string}
+      status: {type: enum, values: [active, dormant, frozen, closed, npa]}
+      holder_name: {type: string, search: name}
+      country: {type: string}
+
+  CryptoWallet:
+    sensitivity: CONFIDENTIAL
+    personal: true
+    title: address
+    properties:
+      address: {type: string, required: true, search: id}
+      chain: {type: string}
+      exchange: {type: string, search: text}
+      kyc_status: {type: string}
+      opened_on: {type: date}
+
+  Property:
+    sensitivity: RESTRICTED
+    title: label
+    properties:
+      label: {type: string, required: true, search: text}
+      kind: {type: enum, values: [flat, land, shop, bungalow, warehouse]}
+      survey_no: {type: string, search: id}
+      value: {type: number}
+      registered_on: {type: date}
+      city: {type: string, search: text}
+      district_lgd: {type: string}
+      # registration document number and office (sub-registrar), carpet area
+      doc_no: {type: string, search: id}
+      sub_registrar: {type: string}
+      area_sqft: {type: number}
+
+  Incident:
+    sensitivity: RESTRICTED
+    title: fir_no
+    retention: case_bound
+    properties:
+      fir_no: {type: string, required: true, search: id}
+      kind: {type: enum, values: [fir, complaint, cri_mac_alert, ecir, cbi_rc, nia_case, seizure, str, ib_assessment, lookout_circular]}
+      agency: {type: string}
+      sections: {type: list, search: text}
+      summary: {type: string, search: text}
+      amount: {type: number}
+      occurred_at: {type: datetime}
+      district_lgd: {type: string}
+      status: {type: enum, values: [registered, under_investigation, chargesheeted, convicted, acquitted, closed]}
+      chargesheeted_on: {type: date}
+      max_punishment_years: {type: integer}
+      # where it happened (locality) and the station that registered it
+      place: {type: string, search: text}
+      police_station: {type: string, search: text}
+
+  Case:
+    sensitivity: RESTRICTED
+    title: case_id
+    properties:
+      case_id: {type: string, required: true}
+      purpose: {type: string, required: true}
+      legal_basis: {type: string, required: true}
+
+  CourtCase:
+    sensitivity: RESTRICTED
+    title: cnr
+    properties:
+      cnr: {type: string, required: true, search: id}
+      court: {type: string}
+      stage: {type: string}
+      next_hearing: {type: date}
+      outcome: {type: enum, values: [pending, convicted, acquitted, discharged]}
+      decided_on: {type: date}
+
+  Firearm:
+    sensitivity: RESTRICTED
+    title: serial_no
+    properties:
+      serial_no: {type: string, required: true, search: id}
+      make: {type: string, search: text}
+      calibre: {type: string}
+      kind: {type: enum, values: [pistol, revolver, rifle, shotgun, country_made, other]}
+      licence_no: {type: string, search: id}
+      status: {type: enum, values: [licensed, recovered, stolen, unlicensed]}
+      # FSL ballistic signature reference: ties a recovered weapon to cartridges fired in other cases
+      ballistic_ref: {type: string, search: id}
+      licensing_authority: {type: string}
+      licence_valid_until: {type: date}
+
+  Tender:
+    sensitivity: RESTRICTED
+    title: tender_id
+    properties:
+      tender_id: {type: string, required: true, search: id}
+      title: {type: string, search: text}
+      department: {type: string, search: text}
+      category: {type: string, search: text}
+      estimate: {type: number}
+      published_on: {type: date}
+      district_lgd: {type: string}
+      closing_on: {type: date}
+      status: {type: string}
+      awarded_amount: {type: number}
+
+  Asset:
+    sensitivity: PUBLIC
+    title: name
+    properties:
+      name: {type: string, required: true, search: name}
+      asset_type: {type: enum, values: [hospital, shelter, school, bridge, river_gauge, warehouse, port, airport, power_plant]}
+      capacity: {type: integer}
+      status: {type: enum, values: [operational, degraded, closed, unknown]}
+      district_lgd: {type: string}
+
+  Hazard:
+    sensitivity: PUBLIC
+    title: headline
+    properties:
+      headline: {type: string, required: true, search: text}
+      headline_original: {type: string}
+      event: {type: string, search: text}
+      severity: {type: enum, values: [Extreme, Severe, Moderate, Minor, Unknown]}
+      urgency: {type: string}
+      certainty: {type: string}
+      sender: {type: string}
+      area_desc: {type: string, search: text}
+      effective: {type: datetime}
+      expires: {type: datetime}
+      translation_status: {type: enum, values: [source_english, pending, machine_translated]}
+
+  Resource:
+    sensitivity: PUBLIC
+    title: label
+    properties:
+      label: {type: string, required: true}
+      kind: {type: string}
+      quantity: {type: integer}
+
+  Scheme:
+    sensitivity: PUBLIC
+    title: name
+    properties:
+      name: {type: string, required: true, search: name}
+      department: {type: string}
+
+link_types:
+  documented_in: {from: [Person, Organisation, Vehicle, Device, Phone, Location, Incident, Event, Shipment, DigitalArtifact, Property, BankAccount], to: [Document], evidentiary: true}
+  participated_in: {from: [Person, Organisation, Vehicle, Device, Phone, Shipment, DigitalArtifact], to: [Event], evidentiary: true}
+  event_at: {from: [Event], to: [Location, Asset, Property], evidentiary: true}
+  operates: {from: [Organisation, Person], to: [Shipment, DigitalArtifact, Device, Vehicle], evidentiary: true}
+  refers_to: {from: [Document], to: [Document, Event, Incident, Shipment, DigitalArtifact], evidentiary: true}
+  accused_in:      {from: [Person, Organisation], to: [Incident], evidentiary: true}
+  victim_in:       {from: [Person, Organisation], to: [Incident], evidentiary: true}
+  complainant_in:  {from: [Person, Organisation], to: [Incident], evidentiary: true}
+  witness_in:      {from: [Person], to: [Incident], evidentiary: false}
+  mentions:        {from: [Incident, Document], to: [Phone, BankAccount, Vehicle, Device, Organisation, CryptoWallet, Person, Property, Firearm, DigitalArtifact], evidentiary: true}
+  uses_phone:      {from: [Person, Organisation], to: [Phone], evidentiary: true}
+  holds_account:   {from: [Person, Organisation], to: [BankAccount, CryptoWallet], evidentiary: true}
+  signatory_of:    {from: [Person], to: [BankAccount], evidentiary: true}
+  owns:            {from: [Person, Organisation], to: [Vehicle, Device, Property, CryptoWallet], evidentiary: true}
+  sim_in_device:   {from: [Phone], to: [Device], evidentiary: true}
+  transferred_to:  {from: [BankAccount, CryptoWallet], to: [BankAccount, CryptoWallet], evidentiary: true}
+  called:          {from: [Phone], to: [Phone], evidentiary: true}
+  stolen_in:       {from: [Vehicle], to: [Incident], evidentiary: true}
+  recovered_at:    {from: [Vehicle], to: [Organisation, Location], evidentiary: true}
+  director_of:     {from: [Person], to: [Organisation], evidentiary: true}
+  controls:        {from: [Person, Organisation], to: [Organisation], evidentiary: true}
+  associate_of:    {from: [Person], to: [Person], evidentiary: true}
+  employee_of:     {from: [Person], to: [Organisation], evidentiary: false}
+  resides_at:      {from: [Person], to: [Location], evidentiary: false, time_bounded: true}
+  registered_at:   {from: [Organisation], to: [Location], evidentiary: true}
+  relative_of:     {from: [Person], to: [Person], evidentiary: false}
+  reported_at:     {from: [Incident], to: [Organisation], evidentiary: false}
+  located_in:      {from: [Location, Asset, Incident, Organisation, AdminUnit, Property], to: [AdminUnit], evidentiary: false}
+  part_of:         {from: [Incident], to: [Case], evidentiary: true}
+  same_as:         {from: [Person], to: [Person], evidentiary: true, resolver: true}
+  # Machine-inferred from shared handsets, SIMs, accounts, money, calls, towers, travel, FIRs; props.bases holds the evidence.
+  inferred_association: {from: [Person], to: [Person], evidentiary: false, inferred: true}
+  affects:         {from: [Hazard], to: [AdminUnit, Asset], evidentiary: false}
+  beneficiary_of:  {from: [Person], to: [Scheme], evidentiary: false}
+  convicted_in:    {from: [Person, Organisation], to: [CourtCase], evidentiary: true}
+  adjudicates:     {from: [CourtCase], to: [Incident], evidentiary: true}
+  history_sheeted_at: {from: [Person], to: [Organisation], evidentiary: true}
+  used_in:         {from: [Firearm, Vehicle, Phone, Device], to: [Incident], evidentiary: true}
+  recovered_in:    {from: [Firearm], to: [Incident], evidentiary: true}
+  licensed_to:     {from: [Firearm], to: [Person, Organisation], evidentiary: true}
+  bid_on:          {from: [Organisation], to: [Tender], evidentiary: true}
+  awarded_to:      {from: [Tender], to: [Organisation], evidentiary: true}
+  issued_by:       {from: [Tender], to: [Organisation], evidentiary: false}
+  holds_handle:    {from: [Person, Organisation], to: [DigitalArtifact], evidentiary: true}
+
+# Actions are the only way to change state. Each is validated, policy-checked and audited.
+actions:
+  open_case:          {roles: [io, supervisor], params: [purpose, legal_basis, fir_no]}
+  close_case:         {roles: [io, supervisor], params: [case_id, outcome], effect: starts retention timer}
+  add_to_case:        {roles: [io, analyst, supervisor], params: [case_id, object_id, reason]}
+  request_expansion:  {roles: [io, analyst], params: [case_id, depth, reason]}
+  approve_expansion:  {roles: [supervisor], params: [request_id], two_person: true}
+  confirm_match:      {roles: [io, analyst, supervisor], params: [review_id, reason]}
+  reject_match:       {roles: [io, analyst, supervisor], params: [review_id, reason]}
+  unmerge:            {roles: [supervisor], params: [link_id, reason]}
+  unmask:             {roles: [io, supervisor, analyst], params: [object_id, property, reason]}
+  flag_for_review:    {roles: [io, analyst, supervisor, operator], params: [object_id, reason]}
+  dispatch_resource:  {roles: [operator, collector], params: [resource, quantity, admin_unit, hazard_id]}
+  create_lead:        {roles: [io, analyst, supervisor], params: [case_id, subject_id, title]}
+  move_lead:          {roles: [io, analyst, supervisor], params: [lead_id, stage, note]}
+  set_legal_hold:     {roles: [supervisor], params: [case_id, hold, reason], effect: suspends retention purge}
+  attach_external_record: {roles: [io, analyst, supervisor], params: [legal_order, source, records], effect: case-bound data, purged with the case}
+  destroy_order_data: {roles: [supervisor], params: [legal_order, reason], effect: destroys everything obtained under an order that was set aside}
+  request_case_from_lead: {roles: [io, supervisor], params: [lead_id, purpose, legal_basis, title], effect: asks a second officer to open a case on a pattern lead}
+  approve_case_from_lead: {roles: [supervisor], params: [request_id], two_person: true, effect: opens the case; the lead's subjects enter case scope and are revealed to its members}
+  dismiss_lead:       {roles: [io, analyst, supervisor], params: [lead_id, reason], effect: records a reviewer disposition used in detector evaluation}
+  run_patterns:       {roles: [supervisor, analyst], params: [], effect: recomputes every detector over all lawfully held data}
+
+# Purposes a case may be opened for. Anything else is refused at open_case.
+# Section 5.3 red lines are enforced by omission: there is no purpose for watching
+# journalists, activists, political opponents or religious groups.
+purposes:
+  - investigation_of_registered_offence
+  - money_laundering_investigation
+  - terror_financing_investigation
+  - bank_fraud_investigation
+  - narcotics_investigation
+  - cyber_fraud_investigation
+  - missing_person_trace
+  - disaster_response
+  - welfare_leakage_audit
+  - procurement_vigilance
+  - corruption_investigation
+  - organised_crime_investigation
+  - homicide_investigation
+  - kidnapping_investigation
+  - vehicle_theft_investigation
+  - arms_trafficking_investigation
+  - terror_investigation
+  - internal_security_threat_investigation
+  - cross_border_threat_investigation
+
+# ---------------------------------------------------------------------------------------------
+# Record classes: every object type and event table belongs to exactly one class. A case's
+# purpose decides which classes its members may read (purpose limitation by record class). An
+# object explicitly admitted to the case scope through an audited action stays readable.
+record_classes:
+  identity:              {label: "Identity and KYC", objects: [Person]}
+  criminal_background:   {label: "FIRs, CCTNS roles, court cases, convictions, history-sheets, weapons", objects: [Incident, CourtCase, Firearm]}
+  travel_immigration:    {label: "PNR, border and immigration records", events: [travel]}
+  communications:        {label: "CDRs, SIMs, handsets (IMEI)", objects: [Phone, Device], events: [cdrs, towers]}
+  movement:              {label: "FASTag toll and ANPR camera reads", events: [tollhits]}
+  property_assets:       {label: "Land, buildings, vehicles", objects: [Property, Vehicle]}
+  corporate:             {label: "Companies, directorships, tenders and bids", objects: [Organisation, Tender], events: [bids]}
+  financial:             {label: "Bank accounts, wallets, transactions", objects: [BankAccount, CryptoWallet], events: [txns]}
+  procurement_licensing: {label: "Controlled-substance and explosives purchase registers", events: [procurements]}
+  schemes_benefits:      {label: "Welfare schemes and beneficiaries", objects: [Scheme]}
+  digital_artifacts:     {label: "Accounts, handles and logs held as sealed exhibits", objects: [DigitalArtifact]}
+  documents:             {label: "Case documents, events and shipments", objects: [Document, Event, Shipment]}
+  biometrics:            {label: "Photographs on record and confirmed face matches", tables: [media, faces]}
+  geography:             {label: "Places, admin units, infrastructure, hazards", objects: [Location, AdminUnit, Asset, Hazard, Resource]}
+  casework:              {label: "Case records", objects: [Case]}
+
+# Which record classes a case opened for each purpose may read. A purpose not listed reads
+# identity and geography only.
+purpose_classes:
+  investigation_of_registered_offence: &ALL [identity, criminal_background, travel_immigration, communications, movement, property_assets, corporate, financial, procurement_licensing, digital_artifacts, documents, biometrics, geography, casework]
+  terror_financing_investigation: *ALL
+  terror_investigation: *ALL
+  narcotics_investigation: *ALL
+  organised_crime_investigation: *ALL
+  arms_trafficking_investigation: *ALL
+  homicide_investigation: [identity, criminal_background, travel_immigration, communications, movement, property_assets, corporate, financial, digital_artifacts, documents, biometrics, geography, casework]
+  kidnapping_investigation: [identity, criminal_background, travel_immigration, communications, movement, property_assets, corporate, financial, digital_artifacts, documents, biometrics, geography, casework]
+  money_laundering_investigation: [identity, criminal_background, travel_immigration, communications, movement, property_assets, corporate, financial, digital_artifacts, documents, biometrics, geography, casework]
+  bank_fraud_investigation: [identity, criminal_background, travel_immigration, communications, property_assets, corporate, financial, digital_artifacts, documents, biometrics, geography, casework]
+  corruption_investigation: [identity, criminal_background, travel_immigration, communications, property_assets, corporate, financial, digital_artifacts, documents, biometrics, geography, casework]
+  procurement_vigilance: [identity, criminal_background, communications, property_assets, corporate, financial, digital_artifacts, documents, geography, casework]
+  cyber_fraud_investigation: [identity, criminal_background, travel_immigration, communications, property_assets, corporate, financial, digital_artifacts, documents, biometrics, geography, casework]
+  vehicle_theft_investigation: [identity, criminal_background, communications, movement, property_assets, corporate, financial, documents, biometrics, geography, casework]
+  missing_person_trace: [identity, criminal_background, travel_immigration, communications, movement, property_assets, corporate, financial, digital_artifacts, documents, biometrics, geography, casework]
+  internal_security_threat_investigation: [identity, criminal_background, travel_immigration, communications, movement, corporate, digital_artifacts, documents, biometrics, geography, casework]
+  cross_border_threat_investigation: [identity, travel_immigration, communications, financial, corporate, digital_artifacts, documents, geography, casework]
+  welfare_leakage_audit: [identity, schemes_benefits, financial, documents, geography, casework]
+  disaster_response: [identity, schemes_benefits, geography, casework]
+
+# Mission tracks: the pattern engine tags every detector with the tracks it serves.
+mission_tracks:
+  terror:            {label: "Terror, terror financing, explosives", lead: NIA}
+  narcotics:         {label: "Narcotics, precursors, couriers", lead: NCB}
+  corruption:        {label: "Corruption, tender rigging, disproportionate assets", lead: CBI}
+  internal_security: {label: "Internal-security network mapping", lead: IB}
+  external:          {label: "Cross-border handlers, money and travel", lead: RAW}
+  money:             {label: "Laundering, hawala, shell companies", lead: ED}
+  organised_crime:   {label: "Gangs, arms, vehicle-theft rings, kidnapping", lead: STATE-POLICE-MH}
+  cyber_fraud:       {label: "Cyber fraud and mule networks", lead: MAHARASHTRA-CYBER}
+
+# Agency mandates: the purposes an agency may open a case for, and the mission tracks whose
+# leads its officers see (pseudonymised until a case is opened on them). These are
+# configurable templates for a pilot, not statements of any agency's legal powers.
+agencies:
+  NIA:               {purposes: [terror_financing_investigation, terror_investigation, arms_trafficking_investigation, investigation_of_registered_offence], tracks: [terror, external, money, organised_crime]}
+  NCB:               {purposes: [narcotics_investigation], tracks: [narcotics]}
+  CBI:               {purposes: [bank_fraud_investigation, corruption_investigation, procurement_vigilance, investigation_of_registered_offence], tracks: [corruption, money]}
+  ED:                {purposes: [money_laundering_investigation], tracks: [money, cyber_fraud, corruption]}
+  IB:                {purposes: [internal_security_threat_investigation], tracks: [internal_security, terror, external]}
+  RAW:               {purposes: [cross_border_threat_investigation], tracks: [external]}
+  MAHARASHTRA-CYBER: {purposes: [cyber_fraud_investigation, investigation_of_registered_offence], tracks: [cyber_fraud, money]}
+  STATE-POLICE-MH:   {purposes: [investigation_of_registered_offence, cyber_fraud_investigation, missing_person_trace, organised_crime_investigation, homicide_investigation, kidnapping_investigation, vehicle_theft_investigation, arms_trafficking_investigation, narcotics_investigation, corruption_investigation], tracks: [organised_crime, narcotics, cyber_fraud, corruption]}
+  MSDMA:             {purposes: [disaster_response], tracks: []}

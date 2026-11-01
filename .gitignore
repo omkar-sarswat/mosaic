@@ -1,0 +1,43 @@
+# Dependencies, environments, and generated state
+.venv/
+venv/
+node_modules/
+web/dist/
+var/
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.tsbuildinfo
+.pytest_cache/
+.ruff_cache/
+coverage/
+.coverage
+*.db
+*.db-shm
+*.db-wal
+
+# Local settings, credentials, and editor/agent tooling
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.claude/
+.impeccable/
+.agents/
+.codex/
+.aws/
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
+
+# Large downloaded benchmark payloads; keep their source notes
+data/external/**
+!data/external/**/
+!data/external/**/README.md
+data/models/
+
+# Third-party reference publications are not part of this distribution
+docs/product-book/research/

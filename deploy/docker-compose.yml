@@ -1,0 +1,45 @@
+# DRISHTI laptop / demo stack.
+#
+#   docker compose -f deploy/docker-compose.yml up --build            # app + OPA policy engine
+#   docker compose -f deploy/docker-compose.yml --profile sso up      # + Keycloak (OIDC)
+#
+# Ports bind to 127.0.0.1 only. Open http://localhost:8000
+name: drishti
+
+services:
+  drishti:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports: ["127.0.0.1:8000:8000"]
+    environment:
+      DRISHTI_AUTH: ${DRISHTI_AUTH:-dev}
+      # the port is published on 127.0.0.1 only, so dev auth may answer the container network
+      DRISHTI_DEV_AUTH_NETWORK: "1"
+      # every access decision is delegated to OPA (fail-closed if OPA is down)
+      DRISHTI_OPA_URL: http://opa:8181
+      DRISHTI_OIDC_ISSUER: http://localhost:8080/realms/drishti
+      DRISHTI_OIDC_JWKS_URL: http://keycloak:8080/realms/drishti/protocol/openid-connect/certs
+    volumes: ["drishti-data:/data"]
+    depends_on: [opa]
+    restart: unless-stopped
+
+  opa:
+    image: openpolicyagent/opa:1.21.2  # version the Rego parity test ran against
+    command: ["run", "--server", "--addr", "0.0.0.0:8181", "--log-level", "error", "/policies"]
+    volumes: ["../policies:/policies:ro"]
+    restart: unless-stopped
+
+  keycloak:
+    profiles: ["sso"]
+    image: quay.io/keycloak/keycloak:26.0.7
+    command: ["start-dev", "--import-realm"]
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD:?set KEYCLOAK_ADMIN_PASSWORD (no default)}
+      KC_HOSTNAME: http://localhost:8080
+    volumes: ["./keycloak:/opt/keycloak/data/import:ro"]
+    ports: ["127.0.0.1:8080:8080"]
+
+volumes:
+  drishti-data: {}

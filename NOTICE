@@ -1,0 +1,32 @@
+DRISHTI
+Copyright 2026 The DRISHTI contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Bundled reference data keeps its own licence and attribution:
+
+* data/reference/lgd_*.csv
+  Local Government Directory (LGD) codes, Government of India, retrieved via Wikidata
+  (properties P12746, P12747, P12748). Wikidata content is CC0 1.0.
+  LGD data is published under the Government Open Data License - India (GODL).
+
+* data/reference/maharashtra_districts.geojson
+  geoBoundaries, IND ADM2 (wmgeolab, William & Mary), source: Pathways Data Pvt. Ltd.,
+  lgdirectory.gov.in. Open Data Commons Open Database License 1.0 (ODbL).
+  Derived database: district polygons re-keyed to LGD codes. Shared under ODbL.
+
+* data/reference/osm_maharashtra_hospitals.geojson
+  © OpenStreetMap contributors, extracted via the Overpass API. ODbL 1.0.
+  Derived database shared under ODbL.
+
+* data/samples/sachet/
+  NDMA SACHET Common Alerting Protocol feed (the feed declares <copyright>public domain</copyright>).
+
+* Basemap tiles in the web UI: OpenFreeMap (openfreemap.org), © OpenMapTiles, data © OpenStreetMap
+  contributors. OSM boundaries do not necessarily reflect the official boundaries of India; official
+  deployments must use a Survey of India / Bhuvan basemap.
+
+Third-party software is listed in pyproject.toml and web/package.json; notable components:
+FastAPI (MIT), PyYAML (MIT), indic-transliteration (MIT), React (MIT), MapLibre GL JS (BSD-3-Clause),
+Cytoscape.js (MIT), Blueprint (Apache-2.0 with an additional clause: derivative products must not be
+presented as Palantir's), Open Policy Agent (Apache-2.0).
